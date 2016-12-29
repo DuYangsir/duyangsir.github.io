@@ -6,18 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>CSS3选择器 | 天堂墙角</title>
+  <title>使用hexo搭建博客 | 天堂墙角</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="子元素选择器">
+  <meta name="description" content="一、前期准备本篇教程基于Mac快速搭建个人博客">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CSS3选择器">
-<meta property="og:url" content="http://yoursite.com/2015/06/29/CSS3选择器/index.html">
+<meta property="og:title" content="使用hexo搭建博客">
+<meta property="og:url" content="http://yoursite.com/2015/06/20/使用Hexo搭建博客/index.html">
 <meta property="og:site_name" content="天堂墙角">
-<meta property="og:description" content="子元素选择器">
-<meta property="og:updated_time" content="2016-12-28T06:49:22.000Z">
+<meta property="og:description" content="一、前期准备本篇教程基于Mac快速搭建个人博客">
+<meta property="og:updated_time" content="2016-12-29T04:20:34.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CSS3选择器">
-<meta name="twitter:description" content="子元素选择器">
+<meta name="twitter:title" content="使用hexo搭建博客">
+<meta name="twitter:description" content="一、前期准备本篇教程基于Mac快速搭建个人博客">
   
     <link rel="alternative" href="/atom.xml" title="天堂墙角" type="application/atom+xml">
   
@@ -149,194 +149,71 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-CSS3选择器" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-使用Hexo搭建博客" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      CSS3选择器
+      使用hexo搭建博客
     </h1>
   
 
-        <a href="/2015/06/29/CSS3选择器/" class="archive-article-date">
-  	<time datetime="2015-06-29T12:37:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-06-29</time>
+        <a href="/2015/06/20/使用Hexo搭建博客/" class="archive-article-date">
+  	<time datetime="2015-06-20T09:25:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-06-20</time>
 </a>
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="子元素选择器"><a href="#子元素选择器" class="headerlink" title="子元素选择器"></a>子元素选择器</h3><a id="more"></a>
-<p><code>E &gt; F</code>子元素选择器选择的是子元素F，子孙不会被选中<br>而后代选择器<code>E F</code>是选择所有的F，包括子子孙孙</p>
-<h3 id="相邻兄弟选择器"><a href="#相邻兄弟选择器" class="headerlink" title="相邻兄弟选择器"></a>相邻兄弟选择器</h3><p><code>E + F</code>相邻兄弟选择器 1.必须是同级的 2.必须是相邻的 3.必须是在下方 4.有且只有一个符合</p>
-<h3 id="通用兄弟选择器"><a href="#通用兄弟选择器" class="headerlink" title="通用兄弟选择器"></a>通用兄弟选择器</h3><p><code>E ~ F</code>相邻兄弟选择器 1.必须是同级的 2.必须是在下方 3.可以有多个符合</p>
-<h3 id="属性选择器"><a href="#属性选择器" class="headerlink" title="属性选择器"></a>属性选择器</h3><p><code>[abc]</code>类型，例如<code>[class]</code>指具有class属性的值</p>
-<p><code>[abc =&quot;value&quot;]</code>类型，属性和值选择器，例如<code>[class=&quot;div&quot;]</code>仅适用<code>class=&quot;div&quot;</code></p>
-<p><code>[abc ~=&quot;value&quot;]</code> ~表示几个以空格隔开的属性值中包含了”value”，例如<code>[class~=&quot;div1&quot;]</code>适用于<code>class=&quot;div1 div2 s2&quot;</code>和<code>class=&quot;div&quot;</code></p>
-<p><code>[abc ^=&quot;value&quot;]</code> ^以value开头的值</p>
-<p><code>[abc $=&quot;value&quot;]</code> $以value结尾的值</p>
-<p><code>[abc *=&quot;value&quot;]</code> *包含value的值</p>
-<p><code>[abc |=&quot;value&quot;]</code> |以value或value-开头的值</p>
-<p><code>[abc =&quot;value&quot;]</code>和<code>[abc *=&quot;value&quot;]</code>较实用。</p>
-<h2 id="伪类选择器"><a href="#伪类选择器" class="headerlink" title="伪类选择器"></a>伪类选择器</h2><h3 id="锚点伪类（a的伪类）"><a href="#锚点伪类（a的伪类）" class="headerlink" title="锚点伪类（a的伪类）"></a>锚点伪类（a的伪类）</h3><p>简称爱恨法则 love &amp; hate</p>
-<ol>
-<li><p>l = link 没有访问过的状态</p>
-</li>
-<li><p>v = visited 访问过后的状态</p>
-</li>
-<li><p>h = hover 鼠标悬浮在标签上的状态</p>
-</li>
-<li><p>a = active 鼠标悬浮在标签上按下没有松开的状态</p>
-</li>
+        <h2 id="一、前期准备"><a href="#一、前期准备" class="headerlink" title="一、前期准备"></a>一、前期准备</h2><h4 id="本篇教程基于Mac快速搭建个人博客"><a href="#本篇教程基于Mac快速搭建个人博客" class="headerlink" title="本篇教程基于Mac快速搭建个人博客"></a>本篇教程基于Mac快速搭建个人博客</h4><a id="more"></a>
+<h3 id="1、安装NodeJS"><a href="#1、安装NodeJS" class="headerlink" title="1、安装NodeJS"></a>1、安装NodeJS</h3><ol>
+<li>可以通过<a href="https://nodejs.org/en/" target="_blank" rel="external">官网下载</a>NodeJS。</li>
+<li>运行安装nodeJS。</li>
+<li>安装完成后在命令行输入“node -v”即可判断是否安装成功</li>
 </ol>
-<p>使用时候顺序不能变，必须从前到后。</p>
-<h3 id="UI元素伪类-表单元素"><a href="#UI元素伪类-表单元素" class="headerlink" title="UI元素伪类 表单元素"></a>UI元素伪类 表单元素</h3><ol>
-<li>:focus 伪类在元素获得焦点（选中输入框时）时向元素添加特殊的样式。</li>
-<li><p>:disabled 废弃状态触发，定义样式，input元素必须要有disabled属性。</p>
-<p> <code>&lt;input type=&quot;text&quot; value=&quot;我是input1&quot; disabled/&gt;</code></p>
-</li>
-<li><p>:checked 选中时做出相应样式改变（兼容性较差）</p>
-<p> 与 <code>&lt;input type=&quot;checkbox&quot;&gt;</code>或 <code>&lt;input type=&quot;radio&quot;&gt;</code>配合使用。</p>
-</li>
-<li><p>:enabled 可用的表单元素状态 默认状态；与disabled相反。</p>
-</li>
+<p><em>显示为v+数字组合就是安装的node的当前版本，表示已经安装成功</em></p>
+<h3 id="2、安装Git"><a href="#2、安装Git" class="headerlink" title="2、安装Git"></a>2、安装Git</h3><ol>
+<li>Mac可以通过安装Xcode就自带有Git</li>
+<li>在命令行输入“git –version”可查看Git是否安装成功</li>
 </ol>
-<pre>
-    &lt;style>
-        input:disabled{
-            border:2px solid blue;
-            background-color:gold;
-              color:red;
-        }
-        input:focus{
-            border:3px solid red;
-            color:yellow;
-        }
-        input:checked{
-            display:block;
-            width:50px;
-            height:50px;
-        }
-        input:enabled{
-            background-color:pink;
-        }
-    &lt;/style>
-    &lt;form>
-        &lt;input type="text" disabled value="这是一个废弃标签"/>
-        &lt;input type="text" value="这是测试focus的"/>
-        &lt;input type="text" value="未设置的背景色是pink的"/>
-        &lt;input type="checkbox"/>
-        &lt;input type="checkbox"/>
-    &lt;/form>
-</pre>
-
-
-
-
-<pre>
-    <style>
-        input:disabled{
-            border:2px solid blue;
-            background-color:gold;
-              color:red;
-        }
-        input:focus{
-            border:3px solid red;
-            color:yellow;
-        }
-        input:checked{
-            display:block;
-            width:50px;
-            height:50px;
-        }
-        input:enabled{
-            background-color:pink;
-        }
-    </style>
-    <form>
-        <input type="text" disabled value="这是一个废弃标签">
-        <input type="text" value="这是测试focus的">
-        <input type="text" value="未设置的背景色是pink的">
-        <input type="checkbox">
-        <input type="checkbox">
-    </form>
-</pre>
-
-
-
-<h3 id="否定选择器"><a href="#否定选择器" class="headerlink" title="否定选择器"></a>否定选择器</h3><p><code>:not</code>类型，通常和属性选择器结合使用</p>
-<p>选中所有的input，排除submit的</p>
-<pre>
-&lt;style>
-        input:not([type="submit"]){
-            border:2px solid red;
-        }
-    &lt;/style>
-    &lt;form>
-    &lt;input type="text"/>
-    &lt;input type="submit"/>
-    &lt;/form>
-</pre>
-
-<pre>
-<style>
-        input:not([type="submit"]){
-            border:2px solid red;
-        }
-    </style>
-    <form>
-    <input type="text">
-    <input type="submit">
-    </form>
-</pre>
-
-<h3 id="nth选择器"><a href="#nth选择器" class="headerlink" title="nth选择器"></a>nth选择器</h3><p><code>:first-child</code> 选择某个元素的第一个子元素</p>
-<p><code>:last-child</code> 选择某个元素的最后一个子元素</p>
-<p><code>:nth-last-child()</code> 选择某个元素的一个或多个特定的子元素，从这个元素的最后一个子元素开始算</p>
-<p><code>:nth-of-type()</code> 选择指定的元素</p>
-<p><code>:nth-last-of-type()</code> 选择指定的元素，从元素的最后一个开始计算</p>
-<p><code>:first-of-type</code> 选择一个上级元素下的第一个同类子元素</p>
-<p><code>:last-of-type</code> 选择一个上级元素的最后一个同类子元素</p>
-<p><code>:only-child</code> 选择的元素是它的父元素的唯一一个子元素</p>
-<p><code>:only-of-type</code> 选择一个元素是它的上级元素的唯一一个相同类型的子元素</p>
-<p><code>:empty</code> 选择的元素里面没有任何内容</p>
-<h3 id="—"><a href="#—" class="headerlink" title="—-"></a>—-</h3><p><code>:nth-child()</code>选择某个元素的一个或多个特定的子元素</p>
-<p><code>:nth-child(length)</code>参数是具体数字</p>
-<p><code>:nth-child(n)</code>参数是n,n从1开始计算</p>
-<p><code>:nth-child(2n)</code>n的倍数选择，n从1开始算(偶数行也可用even)</p>
-<p><code>:nth-child(2n+1)</code>表示隔几选一(奇数行也可用odd)</p>
-<p><code>:nth-child(n+length)</code>选择大于等于length后面的元素</p>
-<p><code>:nth-child(-n+length)</code>选择小于等于length前面的元素</p>
-<h3 id="伪元素"><a href="#伪元素" class="headerlink" title="伪元素"></a>伪元素</h3><p><code>::first-letter</code>选择文本块的第一个字母，除非在同一行里面包含一些其它元素，不过这个主要运用于段落排版上多</p>
-<p><code>::first-line</code>选择元素的第一行</p>
-<p><code>::before,::after</code>这两个主要用来给元素的前面或后面插入内容，这两个常用”content”配合使用，见过最多的就是清除浮动还有图片icon</p>
-<p><code>::selection</code>用来改变浏览网页选中文本的默认效果，<code>::selection</code>只能设置两个属性background,color属性，设置其他属性是没有任何效果的</p>
-<h4 id="利用伪元素请浮动"><a href="#利用伪元素请浮动" class="headerlink" title="利用伪元素请浮动"></a>利用伪元素请浮动</h4><pre>
-.clearfix:after{
-    content: "";
-    display: block;
-    clear: both;
-    /*兼容IE时用，但只识别只有一个冒号的伪元素，养成书写习惯*/
-    height: 0;
-    overflow: hidden;
-    zoom:1;
-}
-</pre>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<p><em>显示为git version+数字组合就是git的当前版本号，表示已经安装了git</em></p>
+<h3 id="3、申请github账号"><a href="#3、申请github账号" class="headerlink" title="3、申请github账号"></a>3、申请github账号</h3><p>点击进入<a href="https://github.com" target="_blank" rel="external">github官网</a>申请账号</p>
+<h2 id="二、Hexo的安装"><a href="#二、Hexo的安装" class="headerlink" title="二、Hexo的安装"></a>二、Hexo的安装</h2><ol>
+<li>首先在命令行里输入命令“hexo install -g hexo”</li>
+<li>如果安装过程中有出现报错字样的话，可以尝试下用sudo来提升安装权限，输入命令：“sudo hexo install -g hexo”(不行就“sudo npm install-g hexo”)。</li>
+<li>然后会提示输入密码，即为电脑管理员的密码。</li>
+<li>在命令行里输入“hexo version”，看到hexo的相关信息即表明hexo安装成功。</li>
+<li>新建一个文件夹，用于存放整个博客，在此文件夹下输入命令“hexo init”初始化hexo目录。</li>
+<li>最后输入“hexo server”启动本地配置，显示如下：<pre><br>INFO  Start processing<br>INFO  Hexo is running at <a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a>. Press Ctrl+C to stop.<br></pre></li>
+<li>复制上面代码中的地址到浏览器便可以在本地浏览新建的博客。</li>
+</ol>
+<h2 id="三、配置Github"><a href="#三、配置Github" class="headerlink" title="三、配置Github"></a>三、配置Github</h2><h4 id="已申请的Github账号一枚"><a href="#已申请的Github账号一枚" class="headerlink" title="已申请的Github账号一枚"></a>已申请的Github账号一枚</h4><h3 id="1、配置ssh-key"><a href="#1、配置ssh-key" class="headerlink" title="1、配置ssh-key"></a>1、配置ssh-key</h3><ol>
+<li>在命令行里输入“git”，等待运行。</li>
+<li>继续输入“ssh-keygen”然后连续三次回车，可以看到下面语句<pre>The key’s randomart image is:<br>+—[RSA 2048]—-+<br>|             o.++|<br>|           . .<em>+o|<br>|          = +++ B|<br>|         B =.o+B.|<br>|        S </em> +.o=+|<br>|         = E ooo=|<br>|          = +  oo|<br>|           o +. .|<br>|            +.o+.|<br>+—-[SHA256]—–+</pre></li>
+<li>接着输入“vim ~/.ssh/id_rsa.pub”会出现另一个对话框，复制“ssh-key”（<em>注意不要多复制内容，否则无效</em>），然后输入“:q”退出窗口，回到命令行。</li>
+<li>登录Github，进入设置-SSH and GPG keys-New SSH key把复制的ssh-key添加进去。</li>
+</ol>
+<h3 id="2、配置Github与本地机器验证"><a href="#2、配置Github与本地机器验证" class="headerlink" title="2、配置Github与本地机器验证"></a>2、配置Github与本地机器验证</h3><ol>
+<li>在命令行中输入“git config - -global user.name “此处为申请的Github的用户名””</li>
+<li>继续输入“git config - -global user.email “此处为申请的Github邮箱””</li>
+</ol>
+<h3 id="3、新建博客域名仓库"><a href="#3、新建博客域名仓库" class="headerlink" title="3、新建博客域名仓库"></a>3、新建博客域名仓库</h3><ol>
+<li>点击“new repository”新建域名仓库，编写输入域名名称。</li>
+<li>勾选“ Initialize this repository with a README ”选项，提交。</li>
+</ol>
+<h2 id="四、发布"><a href="#四、发布" class="headerlink" title="四、发布"></a>四、发布</h2><h3 id="1、发布前的准备"><a href="#1、发布前的准备" class="headerlink" title="1、发布前的准备"></a>1、发布前的准备</h3><ol>
+<li>打开新建的博客文件夹，根目录下找到并使用“Sublime Text”打开“_config.yml”文件.</li>
+<li>文档开头的语句可以自定义，关于博客的名称和相关简介标签。<pre>title: 博客标题名称<br>subtitle: 副标题<br>description:<br>author: 博主<br>language:<br>timezone:</pre></li>
+<li>在文档的最下边，修改“type: git”和添加“repo: 域名仓库的https地址”，代码如下：<pre><br>deploy:<br>type: git<br>repo: <a href="https://github.com/-----------/-----------.io.git" target="_blank" rel="external">https://github.com/-----------/-----------.io.git</a></pre></li>
+</ol>
+<h3 id="2、正式发布"><a href="#2、正式发布" class="headerlink" title="2、正式发布"></a>2、正式发布</h3><ol>
+<li>部署提示找不到Git,输入命令“npm install hexo-deployer-git –save”等待安装完成。<pre><br>npm install hexo-deployer-git –save<br></pre></li>
+<li>输入命令“hexo g”转换文本格式。</li>
+<li>输入命令“hexo d”发布上传到服务器库。</li>
+<li>可以了，登录浏览器查看你的微博吧~ </li>
+</ol>
 
       
 
@@ -416,7 +293,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2015/06/29/CSS3选择器/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2015/06/20/使用Hexo搭建博客/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -430,20 +307,15 @@
   
 <nav id="article-nav">
   
-    <a href="/2015/07/23/CSS 单位使用/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2015/06/22/html书写规范和基础模板/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          CSS单位的使用
+          html书写规范和基础模板
         
       </div>
     </a>
   
-  
-    <a href="/2015/06/29/HTML5标签-04音视频/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">HTML5标签-04音视频</div>
-      <i class="icon-circle-right"></i>
-    </a>
   
 </nav>
 
@@ -454,7 +326,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="CSS3选择器" data-title="CSS3选择器" data-url="http://yoursite.com/2015/06/29/CSS3选择器/"></div>
+	<div class="ds-thread" data-thread-key="使用Hexo搭建博客" data-title="使用hexo搭建博客" data-url="http://yoursite.com/2015/06/20/使用Hexo搭建博客/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
