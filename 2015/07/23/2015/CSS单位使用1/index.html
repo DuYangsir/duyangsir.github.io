@@ -6,17 +6,42 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2015/6 | 天堂墙角</title>
+  <title>CSS单位的使用 | 天堂墙角</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="记录，在路上的">
-<meta property="og:type" content="website">
-<meta property="og:title" content="天堂墙角">
-<meta property="og:url" content="http://yoursite.com/archives/2015/06/index.html">
+  <meta name="description" content="CSS的单位、宽高设置概括：常用的一些设置宽高的单位和属性
+em
+rem
+vw
+vh
+max-width
+max-height
+min-width
+min-height">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS单位的使用">
+<meta property="og:url" content="http://yoursite.com/2015/07/23/2015/CSS单位使用1/index.html">
 <meta property="og:site_name" content="天堂墙角">
-<meta property="og:description" content="记录，在路上的">
+<meta property="og:description" content="CSS的单位、宽高设置概括：常用的一些设置宽高的单位和属性
+em
+rem
+vw
+vh
+max-width
+max-height
+min-width
+min-height">
+<meta property="og:updated_time" content="2017-01-03T02:29:03.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="天堂墙角">
-<meta name="twitter:description" content="记录，在路上的">
+<meta name="twitter:title" content="CSS单位的使用">
+<meta name="twitter:description" content="CSS的单位、宽高设置概括：常用的一些设置宽高的单位和属性
+em
+rem
+vw
+vh
+max-width
+max-height
+min-width
+min-height">
   
     <link rel="alternative" href="/atom.xml" title="天堂墙角" type="application/atom+xml">
   
@@ -148,184 +173,250 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-2015/CSS单位使用1" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      CSS单位的使用
+    </h1>
+  
+
+        <a href="/2015/07/23/2015/CSS单位使用1/" class="archive-article-date">
+  	<time datetime="2015-07-23T00:56:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-07-23</time>
+</a>
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="CSS的单位、宽高设置"><a href="#CSS的单位、宽高设置" class="headerlink" title="CSS的单位、宽高设置"></a>CSS的单位、宽高设置</h2><h3 id="概括："><a href="#概括：" class="headerlink" title="概括："></a>概括：</h3><h4 id="常用的一些设置宽高的单位和属性"><a href="#常用的一些设置宽高的单位和属性" class="headerlink" title="常用的一些设置宽高的单位和属性"></a>常用的一些设置宽高的单位和属性</h4><ol>
+<li>em</li>
+<li>rem</li>
+<li>vw</li>
+<li>vh</li>
+<li>max-width</li>
+<li>max-height</li>
+<li>min-width</li>
+<li>min-height<a id="more"></a>
+</li>
+</ol>
+<h2 id="em"><a href="#em" class="headerlink" title="em"></a>em</h2><h4 id="它是描述相对于应用在当前元素的字体尺寸，相对于元素父级或自身，所以它也是相对长度单位。一般浏览器字体大小默认为16px，则2em-32px，也可以重新定义："><a href="#它是描述相对于应用在当前元素的字体尺寸，相对于元素父级或自身，所以它也是相对长度单位。一般浏览器字体大小默认为16px，则2em-32px，也可以重新定义：" class="headerlink" title="它是描述相对于应用在当前元素的字体尺寸，相对于元素父级或自身，所以它也是相对长度单位。一般浏览器字体大小默认为16px，则2em == 32px，也可以重新定义："></a>它是描述相对于应用在当前元素的字体尺寸，相对于元素父级或自身，所以它也是相对长度单位。一般浏览器字体大小默认为16px，则2em == 32px，也可以重新定义：</h4><pre>body{
+    font-size: 12px;
+}</pre>
+<pre>.div1{
+    font-size: 2em;
+}</pre>
+
+<h4 id="则设置的“div1”中字体大小为24px。"><a href="#则设置的“div1”中字体大小为24px。" class="headerlink" title="则设置的“div1”中字体大小为24px。"></a>则设置的“div1”中字体大小为24px。</h4><h2 id="rem"><a href="#rem" class="headerlink" title="rem"></a>rem</h2><h4 id="根元素（html）的字体尺寸，以（html）的字体尺寸大小来改变字体大小："><a href="#根元素（html）的字体尺寸，以（html）的字体尺寸大小来改变字体大小：" class="headerlink" title="根元素（html）的字体尺寸，以（html）的字体尺寸大小来改变字体大小："></a>根元素（html）的字体尺寸，以（html）的字体尺寸大小来改变字体大小：</h4><pre>html{
+    font-size: 12px;
+}</pre>
+<pre>.div1{
+    font-size: 3em;
+}</pre>
+
+<h4 id="则设置的“div1”中字体大小为36px。"><a href="#则设置的“div1”中字体大小为36px。" class="headerlink" title="则设置的“div1”中字体大小为36px。"></a>则设置的“div1”中字体大小为36px。</h4><h2 id="vw"><a href="#vw" class="headerlink" title="vw"></a>vw</h2><h4 id="viewpoint-width，视窗宽度，1vw-视窗宽度的1"><a href="#viewpoint-width，视窗宽度，1vw-视窗宽度的1" class="headerlink" title="viewpoint width，视窗宽度，1vw=视窗宽度的1%"></a>viewpoint width，视窗宽度，1vw=视窗宽度的1%</h4><pre>.div1{
+    width: 50vw;
+}</pre>
+
+<h2 id="vh"><a href="#vh" class="headerlink" title="vh"></a>vh</h2><h4 id="viewpoint-height，视窗高度，1vh-视窗高度的1"><a href="#viewpoint-height，视窗高度，1vh-视窗高度的1" class="headerlink" title="viewpoint height，视窗高度，1vh=视窗高度的1%"></a>viewpoint height，视窗高度，1vh=视窗高度的1%</h4><pre>.div1{
+    height: 50vh;
+}</pre>
+
+
+<h2 id="max-width"><a href="#max-width" class="headerlink" title="max-width"></a>max-width</h2><h4 id="max-width属性设置元素的最大宽度"><a href="#max-width属性设置元素的最大宽度" class="headerlink" title="max-width属性设置元素的最大宽度"></a>max-width属性设置元素的最大宽度</h4><h4 id="使用如下："><a href="#使用如下：" class="headerlink" title="使用如下："></a>使用如下：</h4><pre>p
+{
+max-width: 200px;
+}</pre>
+
+<h4 id="也可以使用-（定义基于包含它的块级对象的百分比）来进行设置："><a href="#也可以使用-（定义基于包含它的块级对象的百分比）来进行设置：" class="headerlink" title="也可以使用%（定义基于包含它的块级对象的百分比）来进行设置："></a>也可以使用%（定义基于包含它的块级对象的百分比）来进行设置：</h4><pre>p
+{
+max-width: 90%;
+}</pre>
+
+<h2 id="max-height"><a href="#max-height" class="headerlink" title="max-height"></a>max-height</h2><h4 id="max-height属性设置元素的最大高度"><a href="#max-height属性设置元素的最大高度" class="headerlink" title="max-height属性设置元素的最大高度"></a>max-height属性设置元素的最大高度</h4><h4 id="使用如下：-1"><a href="#使用如下：-1" class="headerlink" title="使用如下："></a>使用如下：</h4><pre>p
+{
+max-height: 200px;
+}</pre>
+
+<h4 id="也可以使用-（定义基于包含它的块级对象的百分比）来进行设置：-1"><a href="#也可以使用-（定义基于包含它的块级对象的百分比）来进行设置：-1" class="headerlink" title="也可以使用%（定义基于包含它的块级对象的百分比）来进行设置："></a>也可以使用%（定义基于包含它的块级对象的百分比）来进行设置：</h4><pre>p
+{
+max-height: 90%;
+}</pre>
+
+<h2 id="min-width"><a href="#min-width" class="headerlink" title="min-width"></a>min-width</h2><h4 id="min-width属性设置元素的最小宽度"><a href="#min-width属性设置元素的最小宽度" class="headerlink" title="min-width属性设置元素的最小宽度"></a>min-width属性设置元素的最小宽度</h4><h4 id="使用如下：-2"><a href="#使用如下：-2" class="headerlink" title="使用如下："></a>使用如下：</h4><pre>p
+{
+min-width: 200px;
+}</pre>
+
+<h4 id="也可以使用-（定义基于包含它的块级对象的百分比）来进行设置：-2"><a href="#也可以使用-（定义基于包含它的块级对象的百分比）来进行设置：-2" class="headerlink" title="也可以使用%（定义基于包含它的块级对象的百分比）来进行设置："></a>也可以使用%（定义基于包含它的块级对象的百分比）来进行设置：</h4><pre>p
+{
+min-width: 90%;
+}</pre>
+
+<h2 id="min-height"><a href="#min-height" class="headerlink" title="min-height"></a>min-height</h2><h4 id="min-height属性设置元素的最大高度"><a href="#min-height属性设置元素的最大高度" class="headerlink" title="min-height属性设置元素的最大高度"></a>min-height属性设置元素的最大高度</h4><h4 id="使用如下：-3"><a href="#使用如下：-3" class="headerlink" title="使用如下："></a>使用如下：</h4><pre>p
+{
+min-height: 200px;
+}</pre>
+
+<h4 id="也可以使用-（定义基于包含它的块级对象的百分比）来进行设置：-3"><a href="#也可以使用-（定义基于包含它的块级对象的百分比）来进行设置：-3" class="headerlink" title="也可以使用%（定义基于包含它的块级对象的百分比）来进行设置："></a>也可以使用%（定义基于包含它的块级对象的百分比）来进行设置：</h4><pre>p
+{
+min-height: 90%;
+}</pre>
+
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/z.jpeg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/w.jpeg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2015" class="archive-year">2015</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/06/29/2015/CSS3选择器/" class="archive-article-date">
-  	<time datetime="2015-06-29T12:37:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-06-29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/06/29/2015/CSS3选择器/">CSS3选择器</a>
-    </h1>
-  
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list">
+			 
+        <li class="article-tag-list-item">
+        	<a href="javascript:void(0)" class="article-tag-list-link color4">CSS</a>
+        </li>
+       
+        <li class="article-tag-list-item">
+        	<a href="javascript:void(0)" class="article-tag-list-link color5">CSS3</a>
+        </li>
+      
+		</ul>
+	</div>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2015/07/23/2015/CSS单位使用1/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/06/29/2015/HTML5标签-04音视频/" class="archive-article-date">
-  	<time datetime="2015-06-29T11:17:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-06-29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/06/29/2015/HTML5标签-04音视频/">HTML5标签-04音视频</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-          
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2015/06/29/2015/CSS3选择器/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">CSS3选择器</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/06/27/2015/HTML5标签-01短语句/" class="archive-article-date">
-  	<time datetime="2015-06-27T09:11:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-06-27</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/06/27/2015/HTML5标签-01短语句/">HTML5标签-01</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/06/24/2015/Meta标签-1/" class="archive-article-date">
-  	<time datetime="2015-06-24T11:58:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-06-24</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/06/24/2015/Meta标签-1/">Meta标签</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/06/22/2015/html书写规范和基础模板/" class="archive-article-date">
-  	<time datetime="2015-06-22T06:52:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-06-22</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/06/22/2015/html书写规范和基础模板/">html书写规范和基础模板</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-          
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="2015/CSS单位使用1" data-title="CSS单位的使用" data-url="http://yoursite.com/2015/07/23/2015/CSS单位使用1/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"duyangsir"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/06/20/2015/使用Hexo搭建博客/" class="archive-article-date">
-  	<time datetime="2015-06-20T09:25:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-06-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/06/20/2015/使用Hexo搭建博客/">使用hexo搭建博客</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -348,8 +439,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
