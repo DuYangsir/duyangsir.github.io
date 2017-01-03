@@ -150,18 +150,362 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-2015/CSS单位使用1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-2015/HTML5标签-03" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <html lang="en"><head>
+    <meta charset="UTF-8">
+    <title></title>
+<style id="system" type="text/css">h1,h2,h3,h4,h5,h6,p,blockquote {    margin: 0;    padding: 0;}body {    font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", Arial, sans-serif;    font-size: 13px;    line-height: 18px;    color: #737373;    margin: 10px 13px 10px 13px;}a {    color: #0069d6;}a:hover {    color: #0050a3;    text-decoration: none;}a img {    border: none;}p {    margin-bottom: 9px;}h1,h2,h3,h4,h5,h6 {    color: #404040;    line-height: 36px;}h1 {    margin-bottom: 18px;    font-size: 30px;}h2 {    font-size: 24px;}h3 {    font-size: 18px;}h4 {    font-size: 16px;}h5 {    font-size: 14px;}h6 {    font-size: 13px;}hr {    margin: 0 0 19px;    border: 0;    border-bottom: 1px solid #ccc;}blockquote {    padding: 13px 13px 21px 15px;    margin-bottom: 18px;    font-family:georgia,serif;    font-style: italic;}blockquote:before {    content:"C";    font-size:40px;    margin-left:-10px;    font-family:georgia,serif;    color:#eee;}blockquote p {    font-size: 14px;    font-weight: 300;    line-height: 18px;    margin-bottom: 0;    font-style: italic;}code, pre {    font-family: Monaco, Andale Mono, Courier New, monospace;}code {    background-color: #fee9cc;    color: rgba(0, 0, 0, 0.75);    padding: 1px 3px;    font-size: 12px;    -webkit-border-radius: 3px;    -moz-border-radius: 3px;    border-radius: 3px;}pre {    display: block;    padding: 14px;    margin: 0 0 18px;    line-height: 16px;    font-size: 11px;    border: 1px solid #d9d9d9;    white-space: pre-wrap;    word-wrap: break-word;}pre code {    background-color: #fff;    color:#737373;    font-size: 11px;    padding: 0;}@media screen and (min-width: 768px) {    body {        width: 748px;        margin:10px auto;    }}</style><style id="custom" type="text/css"></style></head>
+<body marginheight="0"><hr>
+<p>title: HTML5标签-03
+date: 2015-06-28 10:27:29
+</p>
+<h2>tags: [html5]</h2>
+<h2>03 表单元素</h2>
+<h2>input新类型</h2>
+<h3>tel</h3>
+<h4>用于输入电话号码，用户点击识别后会跳出数字键。</h4>
+<p><code>&lt;input type="tel"/&gt;</code>
+
+</p>
+<h4>显示效果</h4>
+<pre><input type="tel">
+</pre>
+
+<h3>search</h3>
+<h4>用于提示用户输入要搜索的文字；search和text之间的区别主要在于样式上</h4>
+<p><code>&lt;input type="search"/&gt;</code>
+
+</p>
+<h4>显示效果</h4>
+<pre><input type="search">
+</pre>
+
+<h3>url</h3>
+<h4>用于输入单个网址</h4>
+<p><code>&lt;input type="url"/&gt;</code>
+
+</p>
+<h4>显示效果</h4>
+<pre><input type="url">
+</pre>
+
+<h3>email</h3>
+<h4>用于输入单个电子邮件地址；如果指定了multiple属性，就可以输入多个电子邮件地址，以逗号分隔</h4>
+<p><code>&lt;input type="email"/&gt;</code>
+
+</p>
+<h4>显示效果</h4>
+<pre><input type="email">
+</pre>
+
+<h3>datetime</h3>
+<h4>用于输入时区设置为 UTC 的日期和时间。</h4>
+<p><code>&lt;input type="detetime"&gt;</code>
+
+</p>
+<h4>显示效果</h4>
+<pre><input type="detetime">
+</pre>
+
+<h3>date</h3>
+<h4>用于输入不含时区的日期</h4>
+<p><code>&lt;input type="date"&gt;</code>
+
+</p>
+<h4>显示效果</h4>
+<pre><input type="date">
+</pre>
+
+<h3>month</h3>
+<h4>用于输入含年份和月份但不含时区的日期</h4>
+<p><code>&lt;input type="month"&gt;</code>
+
+</p>
+<h4>显示效果</h4>
+<pre><input type="month">
+</pre>
+
+<h3>week</h3>
+<h4>用于输入含年份和周数但不含时区的日期；例如：此格式的日期2011-W05表示2011年的第5周。</h4>
+<p><code>&lt;input type="week"&gt;</code>
+
+</p>
+<h4>显示效果</h4>
+<pre><input type="week">
+</pre>
+
+<h3>time</h3>
+<h4>用于输入含小时、分钟、秒和秒的小数部分但不含时区的时间值。</h4>
+<p><code>&lt;input type="time"&gt;</code>
+
+</p>
+<h4>显示效果</h4>
+<pre><input type="time">
+</pre>
+
+<h3>datetime-local</h3>
+<h4>用于输入不含时区的日期和时间</h4>
+<p><code>&lt;input type="detetime-local"&gt;</code>
+
+</p>
+<h4>显示效果</h4>
+<pre><input type="detetime-local">
+</pre>
+
+<h3>number</h3>
+<h4>用户输入数字</h4>
+<p><code>&lt;input type="number"&gt;</code>
+
+</p>
+<h4>显示效果</h4>
+<pre><input type="number">
+</pre>
+
+<h3>range</h3>
+<h4>用于输入数字，但与number的区别在于无需输入具体数字；在大部分支持该类型的浏览器中，范围控件的实施形式为滑块。</h4>
+<p><code>&lt;input type="range"&gt;</code>
+
+</p>
+<h4>显示效果</h4>
+<pre><input type="range">
+</pre>
+
+<h3>color</h3>
+<h4>用于通过颜色池控件选择颜色（有兼容问题）</h4>
+<p><code>&lt;input type="corder"&gt;</code>
+
+</p>
+<h4>显示效果</h4>
+<pre><input type="corder">
+</pre>
+
+
+<h2>其他新增类型</h2>
+<h3>lable</h3>
+<h4>表单关联元素，通过增加id选择器和for关联，点击关联值即可聚焦输入框</h4>
+<p><code>&lt;lable for="zh"&gt;账号&lt;/lable&gt;</code>
+
+</p>
+<p><code>&lt;input type="text" id="zh"/&gt;</code>
+
+</p>
+<h4>显示效果</h4>
+<pre>    <lable for="zh">账号</lable>
+    <input type="text" id="zh">
+</pre>
+
+<h3>datalist</h3>
+<h4>定义选项列表，配合input使用，来定义input可能的值；id选择器定位，list关联id名。</h4>
+<pre>    &lt;input type="text" list="haha"/&gt;
+    &lt;datalist id="haha"&gt;
+        &lt;option value="香蕉"&gt;&lt;/option&gt;
+        &lt;option value="苹果"&gt;&lt;/option&gt;
+        &lt;option value="哈密瓜"&gt;&lt;/option&gt;
+        &lt;option value="啤酒"&gt;&lt;/option&gt;
+        &lt;option value="饮料"&gt;&lt;/option&gt;
+    &lt;/datalist&gt;
+</pre>
+
+<h4>显示效果</h4>
+<pre>    <input type="text" list="haha">
+    <datalist id="haha">
+        <option value="香蕉"></option>
+        <option value="苹果"></option>
+        <option value="哈密瓜"></option>
+        <option value="啤酒"></option>
+        <option value="饮料"></option>
+    </datalist>
+</pre>
+
+<h3>keygen</h3>
+<h4>元素的作用是提供一种验证用户的可靠方法。</h4>
+<h4>元素是密钥对生成器（key-pair generator）。当提交表单时，会生成两个键，一个是私钥，一个公钥。</h4>
+<pre>    &lt;form action="demo_form.asp" method="get"&gt;
+    Username: &lt;input type="text" name="usr_name" /&gt;
+    Encryption: &lt;keygen name="security" /&gt;
+    &lt;input type="submit" /&gt;
+    &lt;/form&gt;
+</pre>
+
+<h4>显示效果</h4>
+<pre>    <form action="demo_form.asp" method="get">
+    Username: <input type="text" name="usr_name">
+    Encryption: <keygen name="security">
+    <input type="submit">
+    </form>
+</pre>
+
+<h3>ins和del</h3>
+<h4>定义已经被插入文档中的文本</h4>
+<p><code>&lt;ins&gt;1111&lt;/ins&gt; &lt;del&gt;11111&lt;/del&gt;</code>
+
+</p>
+<h4>显示效果</h4>
+<pre><ins>1111</ins> <del>11111</del>
+</pre>
+
+<h3>samp</h3>
+<h4>表示一段用户应该对其没有什么其他解释的文本字符。要从正常的上下文抽取这些字符时，通常要用到这个标签。</h4>
+<p><code>字符序列 &lt;samp&gt;ae&lt;/samp&gt; 可能会被转换为 &amp;aelig; 连字字符。</code>
+
+</p>
+<h4>显示效果</h4>
+<pre>    字符序列 <samp>ae</samp> 可能会被转换为 æ 连字字符。
+</pre>
+
+<h3>fieldset</h3>
+<h4>元素可将表单内的相关元素分组，<code>legend</code>用来定义<code>fieldset</code>的标题。</h4>
+<pre>&lt;fieldset&gt;
+    &lt;legend&gt;用户信息&lt;/legend&gt;
+    &lt;label for="username"&gt;帐号&lt;/label&gt;
+    &lt;input type="text" id="username"/&gt;&lt;br/&gt;
+    &lt;label for="pas"&gt;密码
+    &lt;input type="password" id="pas"/&gt;&lt;br/&gt;
+&lt;/fieldset&gt;
+</pre>
+
+<h4>显示效果</h4>
+<pre><fieldset>
+        <legend>用户信息</legend>
+    <label for="username">帐号</label>
+    <input type="text" id="username"><br>
+    <label for="pas">密码</label>
+    <input type="password" id="pas"><br>
+</fieldset>
+</pre>
+
+
+<h3>legend</h3>
+<h4>用来定义<code>fieldset</code>的标题，见上。</h4>
+<h2>表单属性</h2>
+<h3>autofocus</h3>
+<h4>用于在网页加载后对焦到相关元素上的输入。</h4>
+<h4>autofocus 的目标可以是输入、选择、文本区域和按钮。</h4>
+<p><code>&lt;input type="text" autofocus/&gt;</code>
+
+</p>
+<h4>显示效果(自动选中，，当你打开这篇文章的时候，它自动跳到了小面的输入框)</h4>
+<pre><input type="text" autofocus>
+</pre>
+
+<h3>placeholder</h3>
+<h4>用于提示用户应输入的数据类型。</h4>
+<h4>在对焦到相关元素以及用户输入数据之前，系统会以浅色文字显示占位符值。您可以在输入和文本区域中指定该值。</h4>
+<p><code>&lt;input type="text" placeholder="请输入你的帐号"/&gt;</code>
+
+</p>
+<h4>显示效果</h4>
+<pre><input type="text" placeholder="请输入你的帐号">
+</pre>
+
+<h3>required</h3>
+<h4>规定必需在提交之前填写输入字段</h4>
+<p><code>&lt;input type="text" name="usr_name" required="required" /&gt;</code>
+
+</p>
+<p><code> &lt;input type="submit" /&gt;</code>
+
+</p>
+<h4>显示效果</h4>
+<pre>    <input type="text" name="usr_name" required="required">
+    <input type="submit">
+</pre>
+
+<h3>pattern</h3>
+<h4>规定用于验证输入字段的模式</h4>
+<p><code>国家代码：&lt;input type="text" name="country_code" pattern="[A-z]{3}"
+title="三个字母的国家代码" /&gt;</code>
+
+</p>
+<p><code>&lt;input type="submit" /&gt;</code>
+
+</p>
+<h4>显示效果</h4>
+<pre>国家代码：<input type="text" name="country_code" pattern="[A-z]{3}" title="三个字母的国家代码">
+<input type="submit">
+</pre>
+
+<h3>autocomplete</h3>
+<h4>规定表单是否应该启用自动完成功能</h4>
+<p><code>&lt;form action="/example/html5/demo_form.asp" method="get" autocomplete="on"&gt;</code>
+
+</p>
+<p><code>First name:&lt;input type="text" name="fname" /&gt;&lt;br /&gt;</code>
+
+</p>
+<p><code>Last name: &lt;input type="text" name="lname" /&gt;&lt;br /&gt;</code>
+
+</p>
+<p><code>E-mail: &lt;input type="email" name="email" autocomplete="off" /&gt;&lt;br /&gt;</code>
+
+</p>
+<p><code>&lt;input type="submit" /&gt;</code>
+
+</p>
+<p><code>&lt;/form&gt;</code>
+
+</p>
+<pre>
+<form action="/example/html5/demo_form.asp" method="get" autocomplete="on">
+First name:<input type="text" name="fname"><br>
+Last name: <input type="text" name="lname"><br>
+E-mail: <input type="email" name="email" autocomplete="off"><br>
+<input type="submit">
+</form>
+
+</pre>
+
+
+
+
+
+<p>Edit By <a href="http://mahua.jser.me" target="_blank" rel="external">MaHua</a></p>
+</body></html>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/01/03/2015/HTML5标签-03/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-2015/CSS单位的使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/23/2015/CSS单位使用1/">CSS单位的使用</a>
+      <a class="article-title" href="/2015/07/23/2015/CSS单位的使用/">CSS单位的使用</a>
     </h1>
   
 
-        <a href="/2015/07/23/2015/CSS单位使用1/" class="archive-article-date">
+        <a href="/2015/07/23/2015/CSS单位的使用/" class="archive-article-date">
   	<time datetime="2015-07-23T00:56:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-07-23</time>
 </a>
       </header>
@@ -178,7 +522,7 @@
 <li>min-width</li>
 <li>min-height
         
-          <a class="article-more-a" href="/2015/07/23/2015/CSS单位使用1/#more">more >></a>
+          <a class="article-more-a" href="/2015/07/23/2015/CSS单位的使用/#more">more >></a>
         
       
 
@@ -192,11 +536,11 @@
 		<ul class="article-tag-list">
 			 
         <li class="article-tag-list-item">
-        	<a href="javascript:void(0)" class="article-tag-list-link color4">CSS</a>
+        	<a href="javascript:void(0)" class="article-tag-list-link color4">css</a>
         </li>
        
         <li class="article-tag-list-item">
-        	<a href="javascript:void(0)" class="article-tag-list-link color5">CSS3</a>
+        	<a href="javascript:void(0)" class="article-tag-list-link color5">css3</a>
         </li>
       
 		</ul>
@@ -206,7 +550,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2015/07/23/2015/CSS单位使用1/">展开全文 >></a>
+          <a class="article-more-a" href="/2015/07/23/2015/CSS单位的使用/">展开全文 >></a>
         </p>
       
 
@@ -309,6 +653,261 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2015/06/29/2015/HTML5标签-04音视频/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-2015/HTML5标签-03表单" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/06/28/2015/HTML5标签-03表单/">HTML5标签-03</a>
+    </h1>
+  
+
+        <a href="/2015/06/28/2015/HTML5标签-03表单/" class="archive-article-date">
+  	<time datetime="2015-06-28T02:27:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-06-28</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="03-表单元素"><a href="#03-表单元素" class="headerlink" title="03 表单元素"></a>03 表单元素</h2><h2 id="input新类型"><a href="#input新类型" class="headerlink" title="input新类型"></a>input新类型</h2><h3 id="tel"><a href="#tel" class="headerlink" title="tel"></a>tel</h3><h4 id="用于输入电话号码，用户点击识别后会跳出数字键。"><a href="#用于输入电话号码，用户点击识别后会跳出数字键。" class="headerlink" title="用于输入电话号码，用户点击识别后会跳出数字键。"></a>用于输入电话号码，用户点击识别后会跳出数字键。</h4><p><code>&lt;input type=&quot;tel&quot;/&gt;</code></p>
+<h4 id="显示效果"><a href="#显示效果" class="headerlink" title="显示效果"></a>显示效果</h4><pre>
+<input type="tel">
+</pre>
+
+<h3 id="search"><a href="#search" class="headerlink" title="search"></a>search</h3><h4 id="用于提示用户输入要搜索的文字；search和text之间的区别主要在于样式上"><a href="#用于提示用户输入要搜索的文字；search和text之间的区别主要在于样式上" class="headerlink" title="用于提示用户输入要搜索的文字；search和text之间的区别主要在于样式上"></a>用于提示用户输入要搜索的文字；search和text之间的区别主要在于样式上</h4><p><code>&lt;input type=&quot;search&quot;/&gt;</code></p>
+<h4 id="显示效果-1"><a href="#显示效果-1" class="headerlink" title="显示效果"></a>显示效果</h4><pre>
+<input type="search">
+</pre>
+
+<h3 id="url"><a href="#url" class="headerlink" title="url"></a>url</h3><h4 id="用于输入单个网址"><a href="#用于输入单个网址" class="headerlink" title="用于输入单个网址"></a>用于输入单个网址</h4><p><code>&lt;input type=&quot;url&quot;/&gt;</code></p>
+<h4 id="显示效果-2"><a href="#显示效果-2" class="headerlink" title="显示效果"></a>显示效果</h4><pre>
+<input type="url">
+</pre>
+
+<h3 id="email"><a href="#email" class="headerlink" title="email"></a>email</h3><h4 id="用于输入单个电子邮件地址；如果指定了multiple属性，就可以输入多个电子邮件地址，以逗号分隔"><a href="#用于输入单个电子邮件地址；如果指定了multiple属性，就可以输入多个电子邮件地址，以逗号分隔" class="headerlink" title="用于输入单个电子邮件地址；如果指定了multiple属性，就可以输入多个电子邮件地址，以逗号分隔"></a>用于输入单个电子邮件地址；如果指定了multiple属性，就可以输入多个电子邮件地址，以逗号分隔</h4><p><code>&lt;input type=&quot;email&quot;/&gt;</code></p>
+<h4 id="显示效果-3"><a href="#显示效果-3" class="headerlink" title="显示效果"></a>显示效果</h4><pre>
+<input type="email">
+</pre>
+
+<h3 id="datetime"><a href="#datetime" class="headerlink" title="datetime"></a>datetime</h3><h4 id="用于输入时区设置为-UTC-的日期和时间。"><a href="#用于输入时区设置为-UTC-的日期和时间。" class="headerlink" title="用于输入时区设置为 UTC 的日期和时间。"></a>用于输入时区设置为 UTC 的日期和时间。</h4><p><code>&lt;input type=&quot;detetime&quot;&gt;</code></p>
+<p>####显示效果</p>
+<pre>
+<input type="detetime">
+</pre>
+
+<h3 id="date"><a href="#date" class="headerlink" title="date"></a>date</h3><h4 id="用于输入不含时区的日期"><a href="#用于输入不含时区的日期" class="headerlink" title="用于输入不含时区的日期"></a>用于输入不含时区的日期</h4><p><code>&lt;input type=&quot;date&quot;&gt;</code></p>
+<p>####显示效果</p>
+<pre>
+<input type="date">
+</pre>
+
+<h3 id="month"><a href="#month" class="headerlink" title="month"></a>month</h3><h4 id="用于输入含年份和月份但不含时区的日期"><a href="#用于输入含年份和月份但不含时区的日期" class="headerlink" title="用于输入含年份和月份但不含时区的日期"></a>用于输入含年份和月份但不含时区的日期</h4><p><code>&lt;input type=&quot;month&quot;&gt;</code></p>
+<p>####显示效果</p>
+<pre>
+<input type="month">
+</pre>
+
+<h3 id="week"><a href="#week" class="headerlink" title="week"></a>week</h3><h4 id="用于输入含年份和周数但不含时区的日期；例如：此格式的日期2011-W05表示2011年的第5周。"><a href="#用于输入含年份和周数但不含时区的日期；例如：此格式的日期2011-W05表示2011年的第5周。" class="headerlink" title="用于输入含年份和周数但不含时区的日期；例如：此格式的日期2011-W05表示2011年的第5周。"></a>用于输入含年份和周数但不含时区的日期；例如：此格式的日期2011-W05表示2011年的第5周。</h4><p><code>&lt;input type=&quot;week&quot;&gt;</code></p>
+<p>####显示效果</p>
+<pre>
+<input type="week">
+</pre>
+
+<h3 id="time"><a href="#time" class="headerlink" title="time"></a>time</h3><h4 id="用于输入含小时、分钟、秒和秒的小数部分但不含时区的时间值。"><a href="#用于输入含小时、分钟、秒和秒的小数部分但不含时区的时间值。" class="headerlink" title="用于输入含小时、分钟、秒和秒的小数部分但不含时区的时间值。"></a>用于输入含小时、分钟、秒和秒的小数部分但不含时区的时间值。</h4><p><code>&lt;input type=&quot;time&quot;&gt;</code></p>
+<p>####显示效果</p>
+<pre>
+<input type="time">
+</pre>
+
+<h3 id="datetime-local"><a href="#datetime-local" class="headerlink" title="datetime-local"></a>datetime-local</h3><h4 id="用于输入不含时区的日期和时间"><a href="#用于输入不含时区的日期和时间" class="headerlink" title="用于输入不含时区的日期和时间"></a>用于输入不含时区的日期和时间</h4><p><code>&lt;input type=&quot;detetime-local&quot;&gt;</code></p>
+<p>####显示效果</p>
+<pre>
+<input type="detetime-local">
+</pre>
+
+<h3 id="number"><a href="#number" class="headerlink" title="number"></a>number</h3><h4 id="用户输入数字"><a href="#用户输入数字" class="headerlink" title="用户输入数字"></a>用户输入数字</h4><p><code>&lt;input type=&quot;number&quot;&gt;</code></p>
+<p>####显示效果</p>
+<pre>
+<input type="number">
+</pre>
+
+<h3 id="range"><a href="#range" class="headerlink" title="range"></a>range</h3><h4 id="用于输入数字，但与number的区别在于无需输入具体数字；在大部分支持该类型的浏览器中，范围控件的实施形式为滑块。"><a href="#用于输入数字，但与number的区别在于无需输入具体数字；在大部分支持该类型的浏览器中，范围控件的实施形式为滑块。" class="headerlink" title="用于输入数字，但与number的区别在于无需输入具体数字；在大部分支持该类型的浏览器中，范围控件的实施形式为滑块。"></a>用于输入数字，但与number的区别在于无需输入具体数字；在大部分支持该类型的浏览器中，范围控件的实施形式为滑块。</h4><p><code>&lt;input type=&quot;range&quot;&gt;</code></p>
+<p>####显示效果</p>
+<pre>
+<input type="range">
+</pre>
+
+<h3 id="color"><a href="#color" class="headerlink" title="color"></a>color</h3><h4 id="用于通过颜色池控件选择颜色（有兼容问题）"><a href="#用于通过颜色池控件选择颜色（有兼容问题）" class="headerlink" title="用于通过颜色池控件选择颜色（有兼容问题）"></a>用于通过颜色池控件选择颜色（有兼容问题）</h4><p><code>&lt;input type=&quot;corder&quot;&gt;</code></p>
+<p>####显示效果</p>
+<pre>
+<input type="corder">
+</pre>
+
+
+<h2 id="其他新增类型"><a href="#其他新增类型" class="headerlink" title="其他新增类型"></a>其他新增类型</h2><h3 id="lable"><a href="#lable" class="headerlink" title="lable"></a>lable</h3><h4 id="表单关联元素，通过增加id选择器和for关联，点击关联值即可聚焦输入框"><a href="#表单关联元素，通过增加id选择器和for关联，点击关联值即可聚焦输入框" class="headerlink" title="表单关联元素，通过增加id选择器和for关联，点击关联值即可聚焦输入框"></a>表单关联元素，通过增加id选择器和for关联，点击关联值即可聚焦输入框</h4><p><code>&lt;lable for=&quot;zh&quot;&gt;账号&lt;/lable&gt;</code></p>
+<p><code>&lt;input type=&quot;text&quot; id=&quot;zh&quot;/&gt;</code></p>
+<h4 id="显示效果-4"><a href="#显示效果-4" class="headerlink" title="显示效果"></a>显示效果</h4><pre>
+    <lable for="zh">账号</lable>
+    <input type="text" id="zh">
+</pre>
+
+<h3 id="datalist"><a href="#datalist" class="headerlink" title="datalist"></a>datalist</h3><h4 id="定义选项列表，配合input使用，来定义input可能的值；id选择器定位，list关联id名。"><a href="#定义选项列表，配合input使用，来定义input可能的值；id选择器定位，list关联id名。" class="headerlink" title="定义选项列表，配合input使用，来定义input可能的值；id选择器定位，list关联id名。"></a>定义选项列表，配合input使用，来定义input可能的值；id选择器定位，list关联id名。</h4><pre>
+    &lt;input type="text" list="haha"/>
+    &lt;datalist id="haha">
+        &lt;option value="香蕉">&lt;/option>
+        &lt;option value="苹果">&lt;/option>
+        &lt;option value="哈密瓜">&lt;/option>
+        &lt;option value="啤酒">&lt;/option>
+        &lt;option value="饮料">&lt;/option>
+    &lt;/datalist>
+</pre>
+
+<h4 id="显示效果-5"><a href="#显示效果-5" class="headerlink" title="显示效果"></a>显示效果</h4><pre>
+    <input type="text" list="haha">
+    <datalist id="haha">
+        <option value="香蕉"></option>
+        <option value="苹果"></option>
+        <option value="哈密瓜"></option>
+        <option value="啤酒"></option>
+        <option value="饮料"></option>
+    </datalist>
+</pre>
+
+<h3 id="keygen"><a href="#keygen" class="headerlink" title="keygen"></a>keygen</h3><h4 id="元素的作用是提供一种验证用户的可靠方法。"><a href="#元素的作用是提供一种验证用户的可靠方法。" class="headerlink" title="元素的作用是提供一种验证用户的可靠方法。"></a>元素的作用是提供一种验证用户的可靠方法。</h4><h4 id="元素是密钥对生成器（key-pair-generator）。当提交表单时，会生成两个键，一个是私钥，一个公钥。"><a href="#元素是密钥对生成器（key-pair-generator）。当提交表单时，会生成两个键，一个是私钥，一个公钥。" class="headerlink" title="元素是密钥对生成器（key-pair generator）。当提交表单时，会生成两个键，一个是私钥，一个公钥。"></a>元素是密钥对生成器（key-pair generator）。当提交表单时，会生成两个键，一个是私钥，一个公钥。</h4><pre>
+    &lt;form action="demo_form.asp" method="get">
+    Username: &lt;input type="text" name="usr_name" />
+    Encryption: &lt;keygen name="security" />
+    &lt;input type="submit" />
+    &lt;/form>
+</pre>
+
+<h4 id="显示效果-6"><a href="#显示效果-6" class="headerlink" title="显示效果"></a>显示效果</h4><pre>
+    <form action="demo_form.asp" method="get">
+    Username: <input type="text" name="usr_name">
+    Encryption: <keygen name="security">
+    <input type="submit">
+    </form>
+</pre>
+
+<h3 id="ins和del"><a href="#ins和del" class="headerlink" title="ins和del"></a>ins和del</h3><h4 id="定义已经被插入文档中的文本"><a href="#定义已经被插入文档中的文本" class="headerlink" title="定义已经被插入文档中的文本"></a>定义已经被插入文档中的文本</h4><p><code>&lt;ins&gt;1111&lt;/ins&gt; &lt;del&gt;11111&lt;/del&gt;</code></p>
+<h4 id="显示效果-7"><a href="#显示效果-7" class="headerlink" title="显示效果"></a>显示效果</h4><pre>
+<ins>1111</ins> <del>11111</del>
+</pre>
+
+<h3 id="samp"><a href="#samp" class="headerlink" title="samp"></a>samp</h3><h4 id="表示一段用户应该对其没有什么其他解释的文本字符。要从正常的上下文抽取这些字符时，通常要用到这个标签。"><a href="#表示一段用户应该对其没有什么其他解释的文本字符。要从正常的上下文抽取这些字符时，通常要用到这个标签。" class="headerlink" title="表示一段用户应该对其没有什么其他解释的文本字符。要从正常的上下文抽取这些字符时，通常要用到这个标签。"></a>表示一段用户应该对其没有什么其他解释的文本字符。要从正常的上下文抽取这些字符时，通常要用到这个标签。</h4><p><code>字符序列 &lt;samp&gt;ae&lt;/samp&gt; 可能会被转换为 &amp;aelig; 连字字符。</code></p>
+<h4 id="显示效果-8"><a href="#显示效果-8" class="headerlink" title="显示效果"></a>显示效果</h4><pre>
+    字符序列 <samp>ae</samp> 可能会被转换为 &aelig; 连字字符。
+</pre>
+
+<h3 id="fieldset"><a href="#fieldset" class="headerlink" title="fieldset"></a>fieldset</h3><h4 id="元素可将表单内的相关元素分组，legend用来定义fieldset的标题。"><a href="#元素可将表单内的相关元素分组，legend用来定义fieldset的标题。" class="headerlink" title="元素可将表单内的相关元素分组，legend用来定义fieldset的标题。"></a>元素可将表单内的相关元素分组，<code>legend</code>用来定义<code>fieldset</code>的标题。</h4><pre>
+&lt;fieldset>
+    &lt;legend>用户信息&lt;/legend>
+    &lt;label for="username">帐号&lt;/label>
+    &lt;input type="text" id="username"/>&lt;br/>
+    &lt;label for="pas">密码
+    &lt;input type="password" id="pas"/>&lt;br/>
+&lt;/fieldset>
+</pre>
+
+<h4 id="显示效果-9"><a href="#显示效果-9" class="headerlink" title="显示效果"></a>显示效果</h4><pre>
+<fieldset>
+        <legend>用户信息</legend>
+    <label for="username">帐号</label>
+    <input type="text" id="username"><br>
+    <label for="pas">密码</label>
+    <input type="password" id="pas"><br>
+</fieldset>
+</pre>
+
+
+<h3 id="legend"><a href="#legend" class="headerlink" title="legend"></a>legend</h3><h4 id="用来定义fieldset的标题，见上。"><a href="#用来定义fieldset的标题，见上。" class="headerlink" title="用来定义fieldset的标题，见上。"></a>用来定义<code>fieldset</code>的标题，见上。</h4><h2 id="表单属性"><a href="#表单属性" class="headerlink" title="表单属性"></a>表单属性</h2><h3 id="autofocus"><a href="#autofocus" class="headerlink" title="autofocus"></a>autofocus</h3><h4 id="用于在网页加载后对焦到相关元素上的输入。"><a href="#用于在网页加载后对焦到相关元素上的输入。" class="headerlink" title="用于在网页加载后对焦到相关元素上的输入。"></a>用于在网页加载后对焦到相关元素上的输入。</h4><h4 id="autofocus-的目标可以是输入、选择、文本区域和按钮。"><a href="#autofocus-的目标可以是输入、选择、文本区域和按钮。" class="headerlink" title="autofocus 的目标可以是输入、选择、文本区域和按钮。"></a>autofocus 的目标可以是输入、选择、文本区域和按钮。</h4><p><code>&lt;input type=&quot;text&quot; autofocus/&gt;</code></p>
+<h4 id="显示效果-自动选中，，当你打开这篇文章的时候，它自动跳到了小面的输入框"><a href="#显示效果-自动选中，，当你打开这篇文章的时候，它自动跳到了小面的输入框" class="headerlink" title="显示效果(自动选中，，当你打开这篇文章的时候，它自动跳到了小面的输入框)"></a>显示效果(自动选中，，当你打开这篇文章的时候，它自动跳到了小面的输入框)</h4><pre>
+<input type="text" autofocus>
+</pre>
+
+<h3 id="placeholder"><a href="#placeholder" class="headerlink" title="placeholder"></a>placeholder</h3><h4 id="用于提示用户应输入的数据类型。"><a href="#用于提示用户应输入的数据类型。" class="headerlink" title="用于提示用户应输入的数据类型。"></a>用于提示用户应输入的数据类型。</h4><h4 id="在对焦到相关元素以及用户输入数据之前，系统会以浅色文字显示占位符值。您可以在输入和文本区域中指定该值。"><a href="#在对焦到相关元素以及用户输入数据之前，系统会以浅色文字显示占位符值。您可以在输入和文本区域中指定该值。" class="headerlink" title="在对焦到相关元素以及用户输入数据之前，系统会以浅色文字显示占位符值。您可以在输入和文本区域中指定该值。"></a>在对焦到相关元素以及用户输入数据之前，系统会以浅色文字显示占位符值。您可以在输入和文本区域中指定该值。</h4><p><code>&lt;input type=&quot;text&quot; placeholder=&quot;请输入你的帐号&quot;/&gt;</code></p>
+<h4 id="显示效果-10"><a href="#显示效果-10" class="headerlink" title="显示效果"></a>显示效果</h4><pre>
+<input type="text" placeholder="请输入你的帐号">
+</pre>
+
+<h3 id="required"><a href="#required" class="headerlink" title="required"></a>required</h3><h4 id="规定必需在提交之前填写输入字段"><a href="#规定必需在提交之前填写输入字段" class="headerlink" title="规定必需在提交之前填写输入字段"></a>规定必需在提交之前填写输入字段</h4><p><code>&lt;input type=&quot;text&quot; name=&quot;usr_name&quot; required=&quot;required&quot; /&gt;</code></p>
+<p><code>&lt;input type=&quot;submit&quot; /&gt;</code></p>
+<h4 id="显示效果-11"><a href="#显示效果-11" class="headerlink" title="显示效果"></a>显示效果</h4><pre>
+    <input type="text" name="usr_name" required="required">
+    <input type="submit">
+</pre>
+
+<h3 id="pattern"><a href="#pattern" class="headerlink" title="pattern"></a>pattern</h3><h4 id="规定用于验证输入字段的模式"><a href="#规定用于验证输入字段的模式" class="headerlink" title="规定用于验证输入字段的模式"></a>规定用于验证输入字段的模式</h4><p><code>国家代码：&lt;input type=&quot;text&quot; name=&quot;country_code&quot; pattern=&quot;[A-z]{3}&quot;
+title=&quot;三个字母的国家代码&quot; /&gt;</code></p>
+<p><code>&lt;input type=&quot;submit&quot; /&gt;</code></p>
+<h4 id="显示效果-12"><a href="#显示效果-12" class="headerlink" title="显示效果"></a>显示效果</h4><pre>
+国家代码：<input type="text" name="country_code" pattern="[A-z]{3}" title="三个字母的国家代码">
+<input type="submit">
+</pre>
+
+<h3 id="autocomplete"><a href="#autocomplete" class="headerlink" title="autocomplete"></a>autocomplete</h3><h4 id="规定表单是否应该启用自动完成功能"><a href="#规定表单是否应该启用自动完成功能" class="headerlink" title="规定表单是否应该启用自动完成功能"></a>规定表单是否应该启用自动完成功能</h4><p><code>&lt;form action=&quot;/example/html5/demo_form.asp&quot; method=&quot;get&quot; autocomplete=&quot;on&quot;&gt;</code></p>
+<p><code>First name:&lt;input type=&quot;text&quot; name=&quot;fname&quot; /&gt;&lt;br /&gt;</code></p>
+<p><code>Last name: &lt;input type=&quot;text&quot; name=&quot;lname&quot; /&gt;&lt;br /&gt;</code></p>
+<p><code>E-mail: &lt;input type=&quot;email&quot; name=&quot;email&quot; autocomplete=&quot;off&quot; /&gt;&lt;br /&gt;</code></p>
+<p><code>&lt;input type=&quot;submit&quot; /&gt;</code></p>
+<p><code>&lt;/form&gt;</code></p>
+<pre>
+
+<form action="/example/html5/demo_form.asp" method="get" autocomplete="on">
+First name:<input type="text" name="fname"><br>
+Last name: <input type="text" name="lname"><br>
+E-mail: <input type="email" name="email" autocomplete="off"><br>
+<input type="submit">
+</form>
+
+</pre>
+
+
+
+
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list">
+			 
+        <li class="article-tag-list-item">
+        	<a href="javascript:void(0)" class="article-tag-list-link color1">html5</a>
+        </li>
+      
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2015/06/28/2015/HTML5标签-03表单/">展开全文 >></a>
         </p>
       
 
@@ -680,11 +1279,15 @@
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="color4">CSS</a>
+                <a href="javascript:void(0)" class="color4">css</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="color5">CSS3</a>
+                <a href="javascript:void(0)" class="color5">css3</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="color1">html5</a>
               </li>
             
             <div class="clearfix"></div>
