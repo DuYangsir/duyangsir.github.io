@@ -4,14 +4,16 @@ var app = new Vue({
     // 使用说明
     explainDialog: false,
     runBox: false,
-    begin: true,
+    begin: false,
+    minspeed: 1,
     // 展示内容
-    textarea: '',
+    textarea: '你好吗',
     textColor: '#000000',
     bgColor: '#ffffff',
     innerheight: '',
     innerwidth: '',
-    speed: 50
+    speed: 50,
+    clicktimes: 0
   },
   mounted() {
     this.innerheight = window.innerHeight
@@ -19,7 +21,25 @@ var app = new Vue({
   },
   methods: {
     textareaChange() {
-      this.begin = this.textarea.length === 0
+      this.begin = this.textarea.length < 3
+    },
+    suggest() {
+      this.$message({
+        message: '暂未开通~',
+        type: 'success',
+        center: true
+      });
+    },
+    textColorChange() {
+      console.log(this.textColor)
+    },
+    closerunbox() {
+      console.log("123eee")
+      this.clicktimes++
+        if (this.clicktimes > 1) {
+          this.clicktimes = 0
+          this.runBox = false
+        }
     }
   }
 })

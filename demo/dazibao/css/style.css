@@ -12,7 +12,6 @@ body {
 body {
   font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
   box-sizing: border-box;
-  padding-top: 5%;
   overflow: hidden;
 }
 
@@ -62,7 +61,7 @@ p {
 }
 
 .run-speed {
-  padding: 10% 10% 0 10%;
+  padding: 5% 10% 0 10%;
 }
 
 .run-speed p {
@@ -70,7 +69,19 @@ p {
 }
 
 .textarea-box {
+  position: relative;
   height: 30%;
+}
+.run-box{
+  width: 100%;
+  height: 100%;
+}
+.textarea-box >span{
+  font-size: 30px;
+  position: absolute;
+  bottom: 3px;
+  right: 7%;
+  color: #888888;
 }
 
 .textarea-box textarea {
@@ -79,7 +90,9 @@ p {
   width: 100%;
   height: 100%;
 }
-
+.explain-text{
+  padding-bottom: 8px;
+}
 .explain-text>i {
   color: #409EFF;
 }

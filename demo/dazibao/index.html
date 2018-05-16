@@ -18,18 +18,21 @@
     <div class="set-box" v-if="!runBox">
       <!-- 使用说明 -->
 
-      <p class="explain-btn">
-        <el-button type="primary" @click="explainDialog = true">使用说明</el-button>
+      <p class="explain-btn bor-box">
+        <el-button type="primary" icon="el-icon-question" @click="explainDialog = true">使用说明</el-button>
+        <el-button type="info" icon="el-icon-info" @click="suggest">建议反馈</el-button>
+
       </p>
       <p class="textarea-box bor-box">
-        <el-input type="textarea" @input="textareaChange" placeholder="请输入内容" v-model="textarea">
+        <el-input type="textarea" minlength="3" maxlength="77" @input="textareaChange" placeholder="请输入内容（3-77）" v-model="textarea">
         </el-input>
+        <span>{{77 - textarea.length}}</span>
       </p>
 
       <div class="color-select bor-box">
         <div>
           <p class="bor-box bor-box-bottom">请选择字体颜色</p>
-          <el-color-picker v-model="textColor"></el-color-picker>
+          <el-color-picker @change="textColorChange" v-model="textColor"></el-color-picker>
         </div>
         <div>
           <p class="bor-box bor-box-bottom">请选择背景颜色</p>
@@ -38,17 +41,19 @@
       </div>
 
       <div class="bor-box run-speed">
-          <p class="">设置滚动速度</p>
-          <el-slider v-model="speed"></el-slider>
+        <p class="">设置滚动速度</p>
+        <el-slider :min="minspeed" v-model="speed"></el-slider>
       </div>
 
       <p class="explain-btn bor-box">
-        <el-button type="success" :disabled="begin">开始</el-button>
+        <el-button type="success" :disabled="begin" @click="runBox = true">开始</el-button>
       </p>
 
     </div>
 
-    <run-box v-else :data="123"></run-box>
+    <div v-else class="run-box" @click="closerunbox">
+      <run-box :runtext="textarea" :runspeed="speed" :textcolors="textColor" :bgcolors="bgColor"></run-box>
+    </div>
 
 
 
@@ -62,6 +67,8 @@
         <i class="el-icon-caret-right"></i> 选择滚动格式（开发中）</p>
       <p class="explain-text">
         <i class="el-icon-caret-right"></i> 点击开始</p>
+      <p class="explain-text">
+        <i class="el-icon-caret-right"></i> 点两次画面关闭</p>
       <span slot="footer" class="dialog-footer">
         <el-button type="primary" @click="explainDialog = false">知道了</el-button>
       </span>
