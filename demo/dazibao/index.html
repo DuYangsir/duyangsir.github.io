@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>web 大字报</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+  <script src="js/run.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <div class="set-box">
+      <!-- 使用说明 -->
+
+      <p class="explain-btn">
+        <el-button type="primary" @click="explainDialog = true">使用说明</el-button>
+      </p>
+      <p class="textarea-box">
+        <el-input type="textarea" placeholder="请输入内容" v-model="textarea">
+        </el-input>
+
+      </p>
+
+    </div>
+
+
+
+    <!-- 弹框 all -->
+    <el-dialog title="Web大字报 V1.0" :visible.sync="explainDialog" width="80%">
+      <p class="explain-text">
+        <i class="el-icon-caret-right"></i> 在文本框里输入想要展示的文字</p>
+      <p class="explain-text">
+        <i class="el-icon-caret-right"></i> 选择文字颜色和背景色</p>
+      <p class="explain-text">
+        <i class="el-icon-caret-right"></i> 选择滚动方式</p>
+      <p class="explain-text">
+        <i class="el-icon-caret-right"></i> 点击开始，并保持横屏</p>
+      <p class="explain-text">
+        <i class="el-icon-caret-right"></i> 多机串联（开发中...）</p>
+      <span slot="footer" class="dialog-footer">
+        <el-button type="primary" @click="explainDialog = false">知道了</el-button>
+      </span>
+    </el-dialog>
+  </div>
+
+
+
+</body>
+
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script src="js/index.js"></script>
+
+</html>

@@ -1,0 +1,55 @@
+/* 通用样式 */
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  box-sizing: border-box;
+  padding-top: 20px;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+#app {
+  width: 100%;
+  height: 100%;
+}
+
+.set-box {
+  height: 100%;
+}
+
+/* 使用说明 */
+
+.explain-btn {
+  text-align: center;
+}
+
+.el-textarea {
+  height: 100%;
+}
+
+.textarea-box {
+  box-sizing: border-box;
+  padding: 5%;
+  width: 100%;
+  height: 30%;
+}
+
+.textarea-box textarea {
+  resize: none;
+  width: 100%;
+  height: 100%;
+}
+
+.explain-text>i {
+  color: #409EFF;
+}
