@@ -3,7 +3,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <meta name="viewport" content="width=device-width,user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>web 大字报</title>
   <link rel="stylesheet" href="css/style.css">
@@ -14,19 +15,40 @@
 
 <body>
   <div id="app">
-    <div class="set-box">
+    <div class="set-box" v-if="!runBox">
       <!-- 使用说明 -->
 
       <p class="explain-btn">
         <el-button type="primary" @click="explainDialog = true">使用说明</el-button>
       </p>
-      <p class="textarea-box">
-        <el-input type="textarea" placeholder="请输入内容" v-model="textarea">
+      <p class="textarea-box bor-box">
+        <el-input type="textarea" @input="textareaChange" placeholder="请输入内容" v-model="textarea">
         </el-input>
+      </p>
 
+      <div class="color-select bor-box">
+        <div>
+          <p class="bor-box bor-box-bottom">请选择字体颜色</p>
+          <el-color-picker v-model="textColor"></el-color-picker>
+        </div>
+        <div>
+          <p class="bor-box bor-box-bottom">请选择背景颜色</p>
+          <el-color-picker v-model="bgColor"></el-color-picker>
+        </div>
+      </div>
+
+      <div class="bor-box run-speed">
+          <p class="">设置滚动速度</p>
+          <el-slider v-model="speed"></el-slider>
+      </div>
+
+      <p class="explain-btn bor-box">
+        <el-button type="success" :disabled="begin">开始</el-button>
       </p>
 
     </div>
+
+    <run-box v-else :data="123"></run-box>
 
 
 

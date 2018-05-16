@@ -6,14 +6,17 @@ body {
   margin: 0;
   height: 100%;
   width: 100%;
+  color: #333333;
 }
 
 body {
   box-sizing: border-box;
-  padding-top: 20px;
+  padding-top: 5%;
+  overflow: hidden;
 }
 
 p {
+  font-size: 14px;
   padding: 0;
   margin: 0;
 }
@@ -37,14 +40,35 @@ p {
   height: 100%;
 }
 
-.textarea-box {
+.bor-box {
   box-sizing: border-box;
-  padding: 5%;
+  padding: 5% 5% 0 5%;
   width: 100%;
+}
+
+.bor-box-bottom {
+  padding: 0 0 10% 0;
+}
+
+.color-select {
+  overflow: hidden;
+}
+
+.color-select>div {
+  text-align: center;
+  float: left;
+  width: 50%;
+}
+.run-speed p{
+  text-align: center;
+}
+
+.textarea-box {
   height: 30%;
 }
 
 .textarea-box textarea {
+  font-size: 16px;
   resize: none;
   width: 100%;
   height: 100%;
@@ -52,4 +76,14 @@ p {
 
 .explain-text>i {
   color: #409EFF;
+}
+
+.test {
+  width: 100vh;
+  height: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(90deg);
+  background-color: pink;
 }
