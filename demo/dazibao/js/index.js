@@ -7,7 +7,7 @@ var app = new Vue({
     begin: false,
     minspeed: 1,
     // 展示内容
-    textarea: '你好吗',
+    textarea: '',
     textColor: '#000000',
     bgColor: '#ffffff',
     innerheight: '',
