@@ -57,11 +57,11 @@
     </div>
 
     <!-- 向上 -->
-    <div :class='{"debugshow": debugshow}' class="debug-box up" @click="debugclick($event,true)">
+    <div v-if="runBox" :class='{"debugshow": debugshow}' class="debug-box up" @click="debugclick($event,true)">
       <h1>向上</h1>
     </div>
     <!-- 向下 -->
-    <div :class='{"debugshow": debugshow}' class="debug-box down" @click="debugclick($event,false)">
+    <div v-if="runBox" :class='{"debugshow": debugshow}' class="debug-box down" @click="debugclick($event,false)">
       <h1>向下</h1>
     </div>
 
