@@ -10,11 +10,12 @@ body {
 }
 
 body {
-  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB",
+    "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
   box-sizing: border-box;
   overflow: hidden;
 }
-.p0{
+.p0 {
   padding: 0 !important;
 }
 p {
@@ -56,7 +57,7 @@ p {
   overflow: hidden;
 }
 
-.color-select>div {
+.color-select > div {
   text-align: center;
   float: left;
   width: 50%;
@@ -74,11 +75,35 @@ p {
   position: relative;
   height: 30%;
 }
-.run-box{
+.run-box {
+  position: relative;
   width: 100%;
   height: 100%;
 }
-.textarea-box >span{
+.debug-box {
+  position: absolute;
+  bottom: 0;
+  width: 49%;
+  height: 30%;
+  background: pink;
+  opacity: 0;
+}
+.debugshow{
+  opacity: .6;
+}
+.debug-box h1 {
+  font-size: 20vw;
+  transform: rotate(90deg);
+  width: 100%;
+  text-align: center;
+}
+.up {
+  right: 0;
+}
+.down {
+  left: 0;
+}
+.textarea-box > span {
   font-size: 30px;
   position: absolute;
   bottom: 3px;
@@ -93,11 +118,11 @@ p {
   width: 100%;
   height: 100%;
 }
-.explain-text{
+.explain-text {
   padding-bottom: 8px;
 }
-.explain-text>i {
-  color: #409EFF;
+.explain-text > i {
+  color: #409eff;
 }
 
 .test {

@@ -46,16 +46,24 @@
 
       <p class="explain-btn bor-box">
         <el-button type="warning" icon="el-icon-info" @click="moresetDialog = true">更多设置</el-button>
-        <el-button type="success" icon="el-icon-loading" :disabled="begin" @click="runBox = true">开始</el-button>
+        <el-button type="success" icon="el-icon-loading" :disabled="begin" @click="runing">开始</el-button>
       </p>
 
     </div>
 
     <div v-else class="run-box" @click="closerunbox">
-      <run-box :runtext="textarea" :fontsizes="fontsizes" :runspeed="speed" :textcolors="textColor" :bgcolors="bgColor"></run-box>
+      <run-box :runtext="textarea" :debugnum="debugnum" :fontsizes="fontsizes" :runspeed="speed" :textcolors="textColor" :bgcolors="bgColor"></run-box>
+
     </div>
 
-
+    <!-- 向上 -->
+    <div :class='{"debugshow": debugshow}' class="debug-box up" @click="debugclick($event,true)">
+      <h1>向上</h1>
+    </div>
+    <!-- 向下 -->
+    <div :class='{"debugshow": debugshow}' class="debug-box down" @click="debugclick($event,false)">
+      <h1>向下</h1>
+    </div>
 
     <!-- 弹框 all -->
     <el-dialog title="Web大字报 V1.0" :visible.sync="explainDialog" width="80%">
@@ -67,6 +75,8 @@
         <i class="el-icon-caret-right"></i> 选择滚动格式（开发中）</p>
       <p class="explain-text">
         <i class="el-icon-caret-right"></i> 点击开始</p>
+      <p class="explain-text">
+        <i class="el-icon-caret-right"></i> 开始后，可点击的右上角和右下角微调</p>
       <p class="explain-text">
         <i class="el-icon-caret-right"></i> 点两次画面关闭</p>
       <span slot="footer" class="dialog-footer">

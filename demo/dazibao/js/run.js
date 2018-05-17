@@ -1,5 +1,5 @@
 Vue.component('run-box', {
-  props: ['runtext', 'runspeed', 'textcolors', 'bgcolors', 'fontsizes'],
+  props: ['runtext', 'runspeed', 'textcolors', 'bgcolors', 'fontsizes', 'debugnum'],
   data() {
     return {
       count: 0,
@@ -78,7 +78,7 @@ Vue.component('run-box', {
         ctx.fillRect(0, -this.innerwidth, this.innerheight, this.innerwidth)
         ctx.fillStyle = this.textcolors
         for (let n = 0; n < this.runtexts.length; n++) {
-          ctx.fillText(this.runtexts[n], runing + n * this.fontsize, -50)
+          ctx.fillText(this.runtexts[n], runing + n * this.fontsize, -50 + this.debugnum)
         }
 
         if (Math.abs(runing) > this.runtextlong / 2) {

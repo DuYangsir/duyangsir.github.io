@@ -2,7 +2,7 @@ var app = new Vue({
   el: '#app',
   data: {
     // 使用说明
-    explainDialog: false,
+    explainDialog: true,
     moresetDialog: false,
     runBox: false,
     begin: true,
@@ -16,7 +16,9 @@ var app = new Vue({
     innerwidth: '',
     speed: 50,
     clicktimes: 0,
-    fontsizes: 1
+    fontsizes: 1,
+    debugnum: 0,
+    debugshow: false
   },
   mounted() {
     this.innerheight = window.innerHeight
@@ -50,6 +52,22 @@ var app = new Vue({
           this.clicktimes = 0
           this.runBox = false
         }
+    },
+    debugclick(event, x) {
+      if (x) {
+        this.debugnum -= 10
+      } else {
+        this.debugnum += 10
+      }
+      console.log(this.debugnum)
+      event.stopPropagation()
+    },
+    runing(){
+      this.runBox = true
+      this.debugshow = true
+      setTimeout(()=>{
+        this.debugshow = false
+      },3000)
     }
   }
 })
