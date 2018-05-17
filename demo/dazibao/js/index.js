@@ -21,11 +21,12 @@ var app = new Vue({
     clicktimes: 0,
     fontsizes: 1,
     debugnum: 0,
+    debugnums: 0,
     debugshow: false
   },
   watch: {
     fontsizes() {
-      this.debugnum = -(this.fontsizes-1)*20
+      this.debugnum = -(this.fontsizes - 1) * 20
     }
   },
   mounted() {
@@ -54,7 +55,6 @@ var app = new Vue({
       textbox.style.backgroundColor = this.bgColor
     },
     closerunbox() {
-      console.log("123eee")
       this.clicktimes++
         if (this.clicktimes > 1) {
           this.clicktimes = 0
@@ -67,7 +67,14 @@ var app = new Vue({
       } else {
         this.debugnum += 8
       }
-      console.log(this.debugnum)
+      event.stopPropagation()
+    },
+    debugclicks(event, x) {
+      if (x) {
+        this.debugnums -= 10
+      } else {
+        this.debugnums += 10
+      }
       event.stopPropagation()
     },
     runing() {
@@ -75,7 +82,7 @@ var app = new Vue({
       this.debugshow = true
       setTimeout(() => {
         this.debugshow = false
-      }, 3000)
+      }, 3500)
     }
   }
 })

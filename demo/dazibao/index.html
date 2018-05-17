@@ -57,18 +57,27 @@
     </div>
 
     <div v-else class="run-box" @click="closerunbox">
-      <run-box :runmodel="runmodel" :runtext="textarea" :debugnum="debugnum" :fontsizes="fontsizes" :runspeed="speed" :textcolors="textColor"
-        :bgcolors="bgColor"></run-box>
+      <run-box :runmodel="runmodel" :runtext="textarea" :debugnums="debugnums" :debugnum="debugnum" :fontsizes="fontsizes" :runspeed="speed"
+        :textcolors="textColor" :bgcolors="bgColor"></run-box>
 
     </div>
 
     <!-- 向上 -->
+    <div v-if="runBox && runmodel===('C'||'D')" :class='{"debugshow": debugshow}' class="debug-box top" @click="debugclicks($event,true)">
+      <h1 class="el-icon-caret-top"></h1>
+    </div>
+    <!-- 向下 -->
+    <div v-if="runBox && runmodel===('C'||'D')" :class='{"debugshow": debugshow}' class="debug-box bottom" @click="debugclicks($event,false)">
+      <h1 class="el-icon-caret-bottom"></h1>
+    </div>
+
+    <!-- 向上 -->
     <div v-if="runBox" :class='{"debugshow": debugshow}' class="debug-box up" @click="debugclick($event,true)">
-      <h1>向上</h1>
+      <h1 class="el-icon-caret-right"></h1>
     </div>
     <!-- 向下 -->
     <div v-if="runBox" :class='{"debugshow": debugshow}' class="debug-box down" @click="debugclick($event,false)">
-      <h1>向下</h1>
+      <h1 class="el-icon-caret-left"></h1>
     </div>
 
     <!-- 弹框 all -->
@@ -78,13 +87,13 @@
       <p class="explain-text">
         <i class="el-icon-caret-right"></i> 选择文字颜色和背景色</p>
       <p class="explain-text">
-        <i class="el-icon-caret-right"></i> 选择滚动格式（开发中）</p>
+        <i class="el-icon-caret-right"></i> 选择滚动格式</p>
       <p class="explain-text">
         <i class="el-icon-caret-right"></i> 点击开始</p>
       <p class="explain-text">
-        <i class="el-icon-caret-right"></i> 开始后，可点击的右上角和右下角微调</p>
+        <i class="el-icon-caret-right"></i> 开始后，可点击画面四角微调</p>
       <p class="explain-text">
-        <i class="el-icon-caret-right"></i> 点两次画面关闭</p>
+        <i class="el-icon-caret-right"></i> 点两次中间画面关闭</p>
       <span slot="footer" class="dialog-footer">
         <el-button type="primary" @click="explainDialog = false">知道了</el-button>
       </span>
@@ -100,10 +109,10 @@
           <el-radio v-model="runmodel" label="B">竖屏滚动模式</el-radio>
         </p>
         <p>
-          <el-radio disabled v-model="runmodel" label="C">横屏单字闪现</el-radio>
+          <el-radio v-model="runmodel" label="C">横屏单字闪现</el-radio>
         </p>
         <p>
-          <el-radio disabled v-model="runmodel" label="D">竖屏单字闪现</el-radio>
+          <el-radio v-model="runmodel" label="D">竖屏单字闪现</el-radio>
         </p>
       </div>
       <span slot="footer" class="dialog-footer">
