@@ -10,9 +10,9 @@ var app = new Vue({
     maxspeed: 200,
     minfsize: 1,
     maxfsize: 10,
-    runmodel: 'B',
+    runmodel: 'A',
     // 展示内容
-    textarea: '身卡就是',
+    textarea: '',
     textColor: '#000000',
     bgColor: '#ffffff',
     innerheight: '',
