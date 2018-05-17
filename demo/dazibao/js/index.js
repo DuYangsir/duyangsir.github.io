@@ -82,7 +82,7 @@ var app = new Vue({
       this.debugshow = true
       setTimeout(() => {
         this.debugshow = false
-      }, 3500)
+      }, 3000)
     }
   }
 })

@@ -63,11 +63,11 @@
     </div>
 
     <!-- 向上 -->
-    <div v-if="runBox && runmodel===('C'||'D')" :class='{"debugshow": debugshow}' class="debug-box top" @click="debugclicks($event,true)">
+    <div v-if="runBox" :class='{"debugshow": debugshow}' class="debug-box top" @click="debugclicks($event,true)">
       <h1 class="el-icon-caret-top"></h1>
     </div>
     <!-- 向下 -->
-    <div v-if="runBox && runmodel===('C'||'D')" :class='{"debugshow": debugshow}' class="debug-box bottom" @click="debugclicks($event,false)">
+    <div v-if="runBox" :class='{"debugshow": debugshow}' class="debug-box bottom" @click="debugclicks($event,false)">
       <h1 class="el-icon-caret-bottom"></h1>
     </div>
 
