@@ -4,7 +4,7 @@ var app = new Vue({
     // 使用说明
     explainDialog: false,
     runBox: false,
-    begin: false,
+    begin: true,
     minspeed: 1,
     // 展示内容
     textarea: '',
