@@ -82,6 +82,7 @@ p {
   bottom: 3px;
   right: 7%;
   color: #888888;
+  text-shadow: 1px 2px 4px #ffffff;
 }
 
 .textarea-box textarea {

@@ -3,9 +3,11 @@ var app = new Vue({
   data: {
     // 使用说明
     explainDialog: false,
+    moresetDialog: false,
     runBox: false,
     begin: true,
     minspeed: 1,
+    maxspeed: 200,
     // 展示内容
     textarea: '',
     textColor: '#000000',
@@ -13,7 +15,8 @@ var app = new Vue({
     innerheight: '',
     innerwidth: '',
     speed: 50,
-    clicktimes: 0
+    clicktimes: 0,
+    fontsizes: 1
   },
   mounted() {
     this.innerheight = window.innerHeight
@@ -30,8 +33,15 @@ var app = new Vue({
         center: true
       });
     },
-    textColorChange() {
-      console.log(this.textColor)
+    textColorChange(x) {
+      this.textColor = x
+      let textbox = document.getElementsByClassName('textarea-box')[0].getElementsByTagName('textarea')[0]
+      textbox.style.color = this.textColor
+    },
+    bgColorChange(x) {
+      this.bgColor = x
+      let textbox = document.getElementsByClassName('textarea-box')[0].getElementsByTagName('textarea')[0]
+      textbox.style.backgroundColor = this.bgColor
     },
     closerunbox() {
       console.log("123eee")

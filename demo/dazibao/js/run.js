@@ -1,5 +1,5 @@
 Vue.component('run-box', {
-  props: ['runtext', 'runspeed', 'textcolors', 'bgcolors'],
+  props: ['runtext', 'runspeed', 'textcolors', 'bgcolors', 'fontsizes'],
   data() {
     return {
       count: 0,
@@ -41,7 +41,7 @@ Vue.component('run-box', {
       this.$refs.canvas.width = this.innerwidth
       let ctx = this.$refs.canvas.getContext("2d")
 
-      this.fontsize = this.innerwidth
+      this.fontsize = parseInt(this.innerwidth/fontsizes)
       this.runtextlong = this.runtexts.length * this.fontsize
 
       ctx.font = this.fontsize + "px arial"
@@ -56,6 +56,7 @@ Vue.component('run-box', {
     })
   },
   methods: {
+    // 默认普通模式
     runA(ctx) {
       let runing = 0
       ctx.rotate(Math.PI / 2)
@@ -70,7 +71,7 @@ Vue.component('run-box', {
 
         if (Math.abs(runing) > this.runtextlong / 2) {
           // 第一部分全部消失了
-          runing = 0
+          runing = -10
           // clearInterval(window.setIntervaltime)
 
         } else {
