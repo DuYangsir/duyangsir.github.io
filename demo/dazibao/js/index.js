@@ -20,6 +20,11 @@ var app = new Vue({
     debugnum: 0,
     debugshow: false
   },
+  watch: {
+    fontsizes() {
+      this.debugnum = -(this.fontsizes-1)*20
+    }
+  },
   mounted() {
     this.innerheight = window.innerHeight
     this.innerwidth = window.innerWidth
@@ -55,19 +60,19 @@ var app = new Vue({
     },
     debugclick(event, x) {
       if (x) {
-        this.debugnum -= 10
+        this.debugnum -= 8
       } else {
-        this.debugnum += 10
+        this.debugnum += 8
       }
       console.log(this.debugnum)
       event.stopPropagation()
     },
-    runing(){
+    runing() {
       this.runBox = true
       this.debugshow = true
-      setTimeout(()=>{
+      setTimeout(() => {
         this.debugshow = false
-      },3000)
+      }, 3000)
     }
   }
 })
