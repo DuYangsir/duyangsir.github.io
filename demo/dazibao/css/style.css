@@ -14,7 +14,9 @@ body {
   box-sizing: border-box;
   overflow: hidden;
 }
-
+.p0{
+  padding: 0 !important;
+}
 p {
   font-size: 14px;
   padding: 0;

@@ -14,7 +14,12 @@ Vue.component('run-box', {
   mounted() {
     // 初始化
     // this.runtexts += this.runtexts
+    this.innerheight = window.innerHeight
+    this.innerwidth = window.innerWidth
+    this.runspeeds = parseInt(2000 / this.runspeed)
 
+
+    // 字数加成双倍
     let textArr = this.runtext.split("")
     this.runtexts = this.runtext.split("")
 
@@ -22,11 +27,11 @@ Vue.component('run-box', {
       this.runtexts.push(textArr[i])
     }
 
-    console.log(this.runtexts)
 
-    this.innerheight = window.innerHeight
-    this.innerwidth = window.innerWidth
-    this.runspeeds = parseInt(2000 / this.runspeed)
+
+
+
+
 
     console.log(this.innerheight, this.innerwidth, this.runtext)
 
@@ -41,12 +46,19 @@ Vue.component('run-box', {
       this.$refs.canvas.width = this.innerwidth
       let ctx = this.$refs.canvas.getContext("2d")
 
-      this.fontsize = parseInt(this.innerwidth/this.fontsizes)
+      this.fontsize = parseInt(this.innerwidth / this.fontsizes)
       this.runtextlong = this.runtexts.length * this.fontsize
 
       ctx.font = this.fontsize + "px arial"
 
-
+      console.log(parseInt(this.innerheight / this.runtextlong))
+      // 如果两倍长度不能占满一屏就加n倍
+      for (let n = 0; n < parseInt(this.innerheight / this.runtextlong) * 2; n++) {
+        for (let i = 0; i < textArr.length; i++) {
+          this.runtexts.push(textArr[i])
+        }
+      }
+      console.log(this.runtexts)
 
       // 开始绘制：
       this.runA(ctx)
@@ -78,7 +90,10 @@ Vue.component('run-box', {
           runing -= 10
         }
       }, this.runspeeds)
-    }
+    },
+    // 通用函数
+    // 是否是小写字母（需要往上提高距离）
+
   },
   destroyed() {
     clearInterval(window.setIntervaltime)
