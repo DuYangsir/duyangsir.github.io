@@ -45,8 +45,8 @@
       </div>
 
       <div class="bor-box run-speed">
-          <p class="">字体占屏幕宽度的：1/{{fontsizes}}</p>
-          <el-slider :min=1 :max=10 v-model="fontsizes"></el-slider>
+        <p class="">字体占屏幕宽度的：1/{{fontsizes}}</p>
+        <el-slider :min="minfsize" :max="maxfsize" v-model="fontsizes"></el-slider>
       </div>
 
       <p class="explain-btn bor-box">
@@ -57,7 +57,8 @@
     </div>
 
     <div v-else class="run-box" @click="closerunbox">
-      <run-box :runtext="textarea" :debugnum="debugnum" :fontsizes="fontsizes" :runspeed="speed" :textcolors="textColor" :bgcolors="bgColor"></run-box>
+      <run-box :runmodel="runmodel" :runtext="textarea" :debugnum="debugnum" :fontsizes="fontsizes" :runspeed="speed" :textcolors="textColor"
+        :bgcolors="bgColor"></run-box>
 
     </div>
 
@@ -90,8 +91,20 @@
     </el-dialog>
 
     <el-dialog title="更多的设置项" :visible.sync="moresetDialog" width="80%">
-      <div class="bor-box run-speed p0">
-        
+      <div class="set-model-box">
+        <h4>展示设置：</h4>
+        <p>
+          <el-radio v-model="runmodel" label="A">横屏滚动模式</el-radio>
+        </p>
+        <p>
+          <el-radio v-model="runmodel" label="B">竖屏滚动模式</el-radio>
+        </p>
+        <p>
+          <el-radio disabled v-model="runmodel" label="C">横屏单字闪现</el-radio>
+        </p>
+        <p>
+          <el-radio disabled v-model="runmodel" label="D">竖屏单字闪现</el-radio>
+        </p>
       </div>
       <span slot="footer" class="dialog-footer">
         <el-button type="primary" @click="moresetDialog = false">完成</el-button>

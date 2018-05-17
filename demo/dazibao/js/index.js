@@ -1,15 +1,18 @@
 var app = new Vue({
   el: '#app',
   data: {
-    // 使用说明
+    // 初始化
     explainDialog: false,
     moresetDialog: false,
     runBox: false,
     begin: true,
     minspeed: 1,
     maxspeed: 200,
+    minfsize: 1,
+    maxfsize: 10,
+    runmodel: 'B',
     // 展示内容
-    textarea: '',
+    textarea: '身卡就是',
     textColor: '#000000',
     bgColor: '#ffffff',
     innerheight: '',

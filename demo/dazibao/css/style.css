@@ -17,6 +17,11 @@ body {
 }
 .p0 {
   padding: 0 !important;
+  margin: 0;
+}
+h5,h4,h3{
+  padding: 0;
+  margin: 0;
 }
 p {
   font-size: 14px;
@@ -51,6 +56,11 @@ p {
 
 .bor-box-bottom {
   padding: 0 0 10% 0;
+}
+
+.set-model-box p{
+  padding: 10px 0;
+  text-align: center;
 }
 
 .color-select {

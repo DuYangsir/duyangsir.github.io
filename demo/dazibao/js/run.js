@@ -1,5 +1,5 @@
 Vue.component('run-box', {
-  props: ['runtext', 'runspeed', 'textcolors', 'bgcolors', 'fontsizes', 'debugnum'],
+  props: ['runtext', 'runspeed', 'textcolors', 'bgcolors', 'fontsizes', 'debugnum', 'runmodel'],
   data() {
     return {
       count: 0,
@@ -19,21 +19,15 @@ Vue.component('run-box', {
     this.runspeeds = parseInt(2000 / this.runspeed)
 
 
-    // 字数加成双倍
+
+
+
     let textArr = this.runtext.split("")
     this.runtexts = this.runtext.split("")
 
-    for (let i = 0; i < textArr.length; i++) {
-      this.runtexts.push(textArr[i])
-    }
 
 
 
-
-
-
-
-    console.log(this.innerheight, this.innerwidth, this.runtext)
 
     window.requestAnimationFrame = window.requestAnimationFrame ||
       window.mozRequestAnimationFrame ||
@@ -47,21 +41,42 @@ Vue.component('run-box', {
       let ctx = this.$refs.canvas.getContext("2d")
 
       this.fontsize = parseInt(this.innerwidth / this.fontsizes)
-      this.runtextlong = this.runtexts.length * this.fontsize
 
       ctx.font = this.fontsize + "px arial"
 
-      console.log(parseInt(this.innerheight / this.runtextlong))
-      // 如果两倍长度不能占满一屏就加n倍
-      for (let n = 0; n < parseInt(this.innerheight / this.runtextlong) * 4; n++) {
+      // 滚动模式：
+
+      if (this.runmodel === 'A' || this.runmodel === 'B') {
+
+        this.runtextlong = this.runtexts.length * this.fontsize
+        // 字数加成双倍
+
+
         for (let i = 0; i < textArr.length; i++) {
           this.runtexts.push(textArr[i])
         }
-      }
-      console.log(this.runtexts)
 
-      // 开始绘制：
-      this.runA(ctx)
+        console.log(this.innerheight, this.innerwidth, this.runtexts, this.runmodel === 'B' ? 1 : parseInt(this.innerheight / this.runtextlong) * (this.runmodel === 'B' ? 40 : 4))
+
+        // 如果两倍长度不能占满一屏就加n倍
+
+        for (let n = 0; n < (this.runmodel === 'B' ? 1 : parseInt(this.innerheight / this.runtextlong)) * (this.runmodel === 'B' ? 40 : 4); n++) {
+
+          for (let p = 0; p < textArr.length; p++) {
+            this.runtexts.push(textArr[p])
+          }
+          console.log(this.runtexts)
+
+        }
+        this.runtextlong = this.runtexts.length * this.fontsize
+        
+        // 开始绘制：
+        this.runAB(ctx)
+      }
+
+
+
+
 
 
 
@@ -69,19 +84,38 @@ Vue.component('run-box', {
   },
   methods: {
     // 默认普通模式
-    runA(ctx) {
+    runAB(ctx) {
       let runing = 0
-      ctx.rotate(Math.PI / 2)
+      let y = 0
+      let w = this.innerwidth
+      let h = this.innerheight
+      if (this.runmodel === 'A') {
+        ctx.rotate(Math.PI / 2)
+        y = -this.innerwidth
+        w = this.innerheight
+        h = this.innerwidth
+      }
       window.setIntervaltime = setInterval(() => {
         ctx.fillStyle = this.bgcolors
         // 清除
-        ctx.fillRect(0, -this.innerwidth, this.innerheight, this.innerwidth)
+        ctx.fillRect(0, y, w, h)
         ctx.fillStyle = this.textcolors
-        for (let n = 0; n < this.runtexts.length; n++) {
-          ctx.fillText(this.runtexts[n], runing + n * this.fontsize, -50 + this.debugnum)
+        if (this.runmodel === 'A') {
+          for (let n = 0; n < this.runtexts.length; n++) {
+            ctx.fillText(this.runtexts[n], runing + n * this.fontsize, -50 + this.debugnum)
+          }
+        } else if (this.runmodel === 'B') {
+          for (let n = 0; n < this.runtexts.length; n++) {
+            ctx.fillText(this.runtexts[n], -this.debugnum, runing + (n + 1) * this.fontsize)
+          }
+          // ctx.fillText("你", -this.debugnum, runing + 1 * this.fontsize)
+
         }
 
-        if (Math.abs(runing) > this.runtextlong / 2) {
+
+        console.log(runing, this.runtextlong / 2, this.runtextlong)
+
+        if (Math.abs(runing) > (this.runmodel === 'B' ? this.runtextlong * 4 / 5 : this.runtextlong / 2)) {
           // 第一部分全部消失了
           runing = -10
           // clearInterval(window.setIntervaltime)
