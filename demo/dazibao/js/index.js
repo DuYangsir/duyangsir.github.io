@@ -2,7 +2,7 @@ var app = new Vue({
   el: '#app',
   data: {
     // 使用说明
-    explainDialog: true,
+    explainDialog: false,
     moresetDialog: false,
     runBox: false,
     begin: true,
