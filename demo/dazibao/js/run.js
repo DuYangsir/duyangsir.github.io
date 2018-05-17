@@ -41,7 +41,7 @@ Vue.component('run-box', {
       this.$refs.canvas.width = this.innerwidth
       let ctx = this.$refs.canvas.getContext("2d")
 
-      this.fontsize = parseInt(this.innerwidth/fontsizes)
+      this.fontsize = parseInt(this.innerwidth/this.fontsizes)
       this.runtextlong = this.runtexts.length * this.fontsize
 
       ctx.font = this.fontsize + "px arial"
