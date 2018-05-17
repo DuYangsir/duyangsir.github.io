@@ -53,7 +53,7 @@ Vue.component('run-box', {
 
       console.log(parseInt(this.innerheight / this.runtextlong))
       // 如果两倍长度不能占满一屏就加n倍
-      for (let n = 0; n < parseInt(this.innerheight / this.runtextlong) * 2; n++) {
+      for (let n = 0; n < parseInt(this.innerheight / this.runtextlong) * 4; n++) {
         for (let i = 0; i < textArr.length; i++) {
           this.runtexts.push(textArr[i])
         }
