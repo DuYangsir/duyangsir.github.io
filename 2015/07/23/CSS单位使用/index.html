@@ -700,5 +700,38 @@ min-height: 90%;
 
 </div>
   </div>
+		<script src="https://duyangsir.github.io/js/jquery.min.js"></script>
+    <script>
+      var a_idx = 0;
+jQuery(document).ready(function($) {
+    $("body").click(function(e){
+ var a = new Array("长寿真好看", "长寿太帅了", "长寿的瞭望", "长寿起来吃饭了", "长寿开心的", "长寿奔跑起来", "长寿在睡觉");
+        var $i = $("<span/>").text(a[a_idx]); //text(a[Math.floor(Math.random()*a.length)]); //text("+1s");
+ a_idx = (a_idx + 1) % a.length;
+        var x = e.pageX, y = e.pageY;
+        $i.css({
+            "z-index":99999,
+            "top":y-20,
+            "left":x,
+            "position":"absolute",
+            "color":"#1668bf"
+        });
+        $("body").append($i);
+        $i.animate(
+            {"top":y-180,"opacity":0},
+            1500,
+            function(){$i.remove();}
+        );
+    });
+});
+var startDate = new Date("2020-04-04 00:00:00".replace(/-/g,"/"));
+console.log(startDate);
+  var endDate = new Date("2020-04-05 00:00:00".replace(/-/g,"/"));
+  $(function(){
+   if(new Date()< endDate && new Date()>startDate){
+    $("html").attr("style", "-webkit-filter: grayscale(95%); -moz-filter: grayscale(95%); -ms-filter: grayscale(95%); -o-filter: grayscale(95%);filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=0.95);  _filter:none; ")
+   }
+  })
+    </script>
 </body>
 </html>
